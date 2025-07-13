@@ -462,7 +462,19 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
             href="https://forms.gle/HE2RyX5CLh7j9FzX9"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-pink-400 to-red-400 px-6 py-3 lg:px-8 lg:py-4 rounded-xl text-white font-bold text-base lg:text-lg hover:from-pink-500 hover:to-red-500 transition-all duration-300 transform hover:scale-105 shadow-xl inline-block"
+            className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 lg:p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            onClick={() => {
+              // NEW COMMIT: Add navigation to data pages
+              if (card.title === "Allotments") {
+                window.location.href = "/allotments";
+              } else if (card.title === "Closing Ranks") {
+                window.location.href = "/closing-ranks";
+              } else if (card.title === "Seat Matrix") {
+                window.location.href = "/seat-matrix";
+              } else if (card.title === "Fee, Stipend & Bond") {
+                window.location.href = "/fee-stipend-bond";
+              }
+            }}
           >
             Click Here for Free Consultation
           </a>
