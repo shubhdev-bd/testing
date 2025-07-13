@@ -77,7 +77,7 @@ const resultrankingPage: React.FC<resultrankingPageProps> = ({ onBack }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/data/NIRF_Rank_2024.csv");
+        const response = await fetch("/data/TOP_50_NIRF.csv");
         const csvText = await response.text();
         const parsedData = parseCSV(csvText);
         setColleges(parsedData);
