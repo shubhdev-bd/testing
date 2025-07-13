@@ -72,7 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       color: "text-cyan-600",
     },
     {
-      id: "counselling", // NEW COMMIT: Fixed counselling navigation
+      id: "counseling", // NEW COMMIT: Fixed counseling navigation
       icon: UserCheck,
       label: "Counseling",
       hasSubmenu: false,

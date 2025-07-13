@@ -134,7 +134,7 @@ function App() {
     }
 
     // Counseling page
-    if (activeSection === "counselling") {
+    if (activeSection === "counselling" || activeSection === "counseling") {
       return <CounselingPage onBack={handleBackToDashboard} />;
     }
 

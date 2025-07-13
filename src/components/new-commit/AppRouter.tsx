@@ -34,10 +34,12 @@ const AppRouter: React.FC = () => {
         <Route path="/fee-stipend-bond" element={<FeeStipendBondPage onBack={() => window.history.back()} />} />
         
         {/* Results and Rankings Route */}
+        <Route path="/results" element={<resultrankingPage onBack={() => window.history.back()} />} />
         <Route path="/results-rankings" element={<resultrankingPage onBack={() => window.history.back()} />} />
         
         {/* Counseling Route */}
         <Route path="/counseling" element={<CounselingPage onBack={() => window.history.back()} />} />
+        <Route path="/counselling" element={<CounselingPage onBack={() => window.history.back()} />} />
         
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
