@@ -55,11 +55,11 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
       return {
         Round: parseInt(values[0]),
         AI_Rank: parseInt(values[1]),
-        State: values[2],
-        Institute: values[3],
-        Course: values[4],
-        Quota: values[5],
-        Category: values[6],
+        State: values[2] || '',
+        Institute: values[3] || '',
+        Course: values[4] || '',
+        Quota: values[5] || '',
+        Category: values[6] || '',
       };
     });
   };
