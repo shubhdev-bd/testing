@@ -215,7 +215,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
               <Users className="w-8 h-8" />
             </div>
             <h2 className="text-3xl font-bold mb-4">
-              INICET PG Counseling Results
+              INICET PG Allotment Data
             </h2>
             <p className="text-indigo-100 text-lg">
               Round-wise seat allotment data for postgraduate medical courses
