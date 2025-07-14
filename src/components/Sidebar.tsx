@@ -1,21 +1,12 @@
 import React, { useState } from "react";
 import {
   Home,
-  Play,
-  Database,
   Settings,
   Compass,
-  Building,
   GraduationCap,
   UserCheck,
-  BookOpen,
   ChevronDown,
-  ChevronRight,
-  BarChart3,
-  FileText,
   Award,
-  Menu,
-  X,
   PanelLeftClose,
   PanelLeftOpen,
 } from "lucide-react";
