@@ -12,13 +12,13 @@ import SeatMatrixPage from "./pages/SeatMatrixPage";
 import FeeStipendBondPage from "./pages/FeeStipendBondPage";
 import ChoiceLists from "./components/ChoiceLists";
 import MobileBottomNav from "./components/MobileBottomNav";
-import LoadingScreen from "./components/LoadingScreen";
 import PlaceholderContent from "./components/PlaceholderContent";
 import ProfilePage from "./components/ProfilePage";
 import SupportPage from "./components/SupportPage";
 import FAQPage from "./components/FAQPage";
 import UniversitiesPage from "./components/UniversitiesPage";
-import resultrankingPage from "./components/resultranking";
+import ResultrankingPage from "./components/Resultrankingpage";
+import NIRFRankingsPage from "./components/NIRFRankingsPage";
 import CounselingPage from "./components/counsellingpage";
 import AIAssistant from "./components/AIAssistant";
 import WhatsAppSupport from "./components/WhatsAppSupport";
@@ -39,13 +39,13 @@ function App() {
   // Demo user
   const [isLoggedIn] = useState(true);
   const [user] = useState({
-    name: "Demo Student",
-    email: "demo@gmail.com",
+    name: "Madhav Deshmukh",
+    email: "madhav.deshmukh@gmail.com",
     phone: "+91 9876543210",
     neetRank: "12,345",
     category: "General",
     state: "Maharashtra",
-    avatar: "DS",
+    avatar: "MD",
   });
 
   // Search input change
@@ -74,15 +74,19 @@ function App() {
       setShowPlaceholder(false);
     } else {
       // NEW COMMIT: Handle data page navigation
-      if (section === "allotments" || section === "closing-ranks" || 
-          section === "seat-matrix" || section === "fee-stipend-bond") {
+      if (
+        section === "allotments" ||
+        section === "closing-ranks" ||
+        section === "seat-matrix" ||
+        section === "fee-stipend-bond"
+      ) {
         setActiveSection(section);
         setShowPlaceholder(false);
         setCurrentNeetPage(null);
         setIsMobileMenuOpen(false);
         return;
       }
-      
+
       setShowPlaceholder(true);
       setCurrentNeetPage(null);
     }
@@ -117,11 +121,11 @@ function App() {
     // NEET Pages
     if (currentNeetPage) {
       switch (currentNeetPage) {
-        case 'neet-ug':
+        case "neet-ug":
           return <NeetUGPage />;
-        case 'neet-pg':
+        case "neet-pg":
           return <NeetPGPage />;
-        case 'inicet':
+        case "inicet":
           return <INICETPage />;
         default:
           return <NeetUGPage />;
@@ -130,7 +134,7 @@ function App() {
 
     // Results and Rankings page
     if (activeSection === "results") {
-      return <resultrankingPage onBack={handleBackToDashboard} />;
+      return <ResultrankingPage onBack={handleBackToDashboard} />;
     }
 
     // Counseling page

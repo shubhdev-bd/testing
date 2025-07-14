@@ -19,7 +19,7 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
 } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 /**
  * Sidebar Component Props Interface
  * Defines the props required for the Sidebar component
@@ -50,6 +50,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     "tools",
     "explore",
   ]);
+  const navigate = useNavigate();
 
   /**
    * Toggle expansion state of menu sections
@@ -95,7 +96,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       label: "Results & Rankings",
       hasSubmenu: false,
       color: "text-emerald-600",
-      onClick: () => (window.location.href = "/resultranking"),
+      onClick: () => navigate("/resultranking"),
     },
     {
       id: "explore",

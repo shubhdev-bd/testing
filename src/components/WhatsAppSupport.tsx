@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import React, { useState } from "react";
+import { MessageCircle, X } from "lucide-react";
 
 /**
  * WhatsAppSupport Component
@@ -15,10 +15,12 @@ const WhatsAppSupport: React.FC = () => {
    * Opens WhatsApp with pre-filled message
    */
   const handleWhatsAppClick = () => {
-    const phoneNumber = '919876543210'; // Replace with actual WhatsApp number
-    const message = encodeURIComponent('Hi! I need help with medical counselling guidance.');
+    const phoneNumber = "919876543210"; // Replace with actual WhatsApp number
+    const message = encodeURIComponent(
+      "Hi! I need help with medical counselling guidance."
+    );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
   };
 
   if (!isVisible) return null;
@@ -43,11 +45,12 @@ const WhatsAppSupport: React.FC = () => {
             <X className="w-4 h-4 text-slate-600" />
           </button>
         </div>
-        
+
         <p className="text-sm text-slate-700 mb-4">
-          Need instant help? Chat with our counselling experts on WhatsApp for immediate assistance.
+          Need instant help? Chat with our counselling experts on WhatsApp for
+          immediate assistance.
         </p>
-        
+
         <button
           onClick={handleWhatsAppClick}
           className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
@@ -55,7 +58,7 @@ const WhatsAppSupport: React.FC = () => {
           <MessageCircle className="w-5 h-5" />
           <span>Start WhatsApp Chat</span>
         </button>
-        
+
         <p className="text-xs text-slate-500 mt-2 text-center">
           Available 24/7 for urgent queries
         </p>

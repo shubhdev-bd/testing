@@ -133,15 +133,12 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
 
   // NEET statistics data for comparison display
   const neetStats = [
-    { label: "Registered", value: "6,819", year: "2024" },
-    { label: "Appeared", value: "6,612", year: "2024" },
-    { label: "Qualified", value: "4,681", year: "2024" },
-    { label: "Registered", value: "3,49,759", year: "2023" },
-    { label: "Appeared", value: "3,33,333", year: "2023" },
-    { label: "Qualified", value: "2,15,768", year: "2023" },
-    { label: "Registered", value: "2,82,051", year: "2022" },
-    { label: "Appeared", value: "2,74,542", year: "2022" },
-    { label: "Qualified", value: "1,42,829", year: "2022" },
+    { label: "Registered", value: "6,819", year: "2025" },
+    { label: "Appeared", value: "6,612", year: "2025" },
+    { label: "Qualified", value: "4,681", year: "2025" },
+    { label: "Registered", value: "3,49,759", year: "2024" },
+    { label: "Appeared", value: "3,33,333", year: "2024" },
+    { label: "Qualified", value: "2,15,768", year: "2024" },
   ];
 
   // Timeline steps for counseling process
@@ -235,12 +232,12 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
                   <span>{button.label}</span>
                 </button>
               ))}
-              <button className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white hover:bg-green-500 transition-all duration-300 transform hover:scale-110 shadow-lg">
+              {/* <button className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white hover:bg-green-500 transition-all duration-300 transform hover:scale-110 shadow-lg">
                 <span className="text-lg font-bold">W</span>
               </button>
               <button className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110 shadow-lg">
                 <span className="text-lg font-bold">T</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

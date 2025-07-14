@@ -173,11 +173,11 @@ const NeetComparison: React.FC = () => {
               style={{
                 background: "#fff",
                 borderRadius: "1rem",
-                padding: "1.5rem 1.2rem",
+                padding: "2rem 2rem",
                 textAlign: "center",
-                flex: "1 1 28%",
+                flex: "1 1 38%",
                 boxShadow: "0 6px 18px rgba(33,150,243,0.08)",
-                minWidth: 180,
+                minWidth: 90,
                 position: "relative",
                 borderTop: `5px solid ${colorMap[key]}`,
                 transition: "transform 0.2s",
@@ -281,7 +281,7 @@ const NeetComparison: React.FC = () => {
                   </>
                 )}
               </div>
-              <div style={{ fontSize: "0.8rem", color: "#888", marginTop: 6 }}>
+              <div style={{ fontSize: "0.9rem", color: "#888", marginTop: 6 }}>
                 *2026 is a basic prediction (+2% over 2025)
               </div>
             </div>

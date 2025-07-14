@@ -48,9 +48,13 @@ const Header: React.FC<HeaderProps> = ({
 
   // NEET dropdown options
   const neetOptions = [
-    { id: 'neet-ug', label: 'NEET UG', description: 'Undergraduate Medical' },
-    { id: 'neet-pg', label: 'NEET PG', description: 'Postgraduate Medical' },
-    { id: 'inicet', label: 'INICET', description: 'Institute of National Importance' }
+    { id: "neet-ug", label: "NEET UG", description: "Undergraduate Medical" },
+    { id: "neet-pg", label: "NEET PG", description: "Postgraduate Medical" },
+    {
+      id: "inicet",
+      label: "INICET",
+      description: "Institute of National Importance",
+    },
   ];
 
   return (
@@ -126,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({
                   onClick={() => toggleDropdown("neet")}
                   className="flex items-center space-x-2 px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 font-medium"
                 >
-                  <span>NEET Exams</span>
+                  <span>NEET UG</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === "neet" && (
@@ -140,8 +144,12 @@ const Header: React.FC<HeaderProps> = ({
                         }}
                         className="w-full text-left px-4 py-3 hover:bg-slate-50 transition-colors"
                       >
-                        <div className="font-medium text-slate-800">{option.label}</div>
-                        <div className="text-sm text-slate-600">{option.description}</div>
+                        <div className="font-medium text-slate-800">
+                          {option.label}
+                        </div>
+                        <div className="text-sm text-slate-600">
+                          {option.description}
+                        </div>
                       </button>
                     ))}
                   </div>
@@ -209,7 +217,7 @@ const Header: React.FC<HeaderProps> = ({
                   </div>
                 )}
               </div>
-              
+
               <button
                 onClick={() => onSectionChange("faq")}
                 className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
@@ -239,7 +247,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Search Bar */}
       <div className="xl:hidden mt-3">
         <div className="relative">

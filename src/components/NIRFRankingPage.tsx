@@ -12,7 +12,7 @@ import {
   Filter,
 } from "lucide-react";
 
-interface resultrankingPageProps {
+interface NIRFRankingsPageProps {
   onBack: () => void;
 }
 
@@ -34,7 +34,7 @@ interface CollegeData {
  * Displays top medical colleges based on NIRF rankings with detailed information
  * Features search, filtering, and comprehensive college data in table format
  */
-const resultrankingPage: React.FC<resultrankingPageProps> = ({ onBack }) => {
+const NIRFRankingsPage: React.FC<NIRFRankingsPageProps> = ({ onBack }) => {
   // State for college data
   const [colleges, setColleges] = useState<CollegeData[]>([]);
   // State for loading status
@@ -371,4 +371,4 @@ const resultrankingPage: React.FC<resultrankingPageProps> = ({ onBack }) => {
   );
 };
 
-export default resultrankingPage;
+export default NIRFRankingsPage;

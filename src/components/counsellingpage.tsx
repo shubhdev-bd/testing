@@ -55,11 +55,11 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
       return {
         Round: parseInt(values[0]),
         AI_Rank: parseInt(values[1]),
-        State: values[2] || '',
-        Institute: values[3] || '',
-        Course: values[4] || '',
-        Quota: values[5] || '',
-        Category: values[6] || '',
+        State: values[2] || "",
+        Institute: values[3] || "",
+        Course: values[4] || "",
+        Quota: values[5] || "",
+        Category: values[6] || "",
       };
     });
   };
@@ -71,7 +71,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/data/INICET PG.csv");
+        const response = await fetch("/data/INICET_PG.csv");
         const csvText = await response.text();
         const parsedData = parseCSV(csvText);
         setCounselingData(parsedData);
@@ -317,10 +317,6 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
               <h3 className="text-xl font-bold text-slate-800">
                 Counseling Allotment Data
               </h3>
-              <button className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors">
-                <Download className="w-4 h-4" />
-                <span>Export Data</span>
-              </button>
             </div>
           </div>
 
@@ -349,9 +345,9 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
                       index % 2 === 0 ? "bg-white/50" : "bg-slate-50/50"
                     }`}
                   >
-                    <td className="px-6 py-4">
+                    <td className="px-2 py-4">
                       <span
-                        className={`px-3 py-1 rounded-full text-xs font-medium ${getRoundBadgeColor(
+                        className={`px-2 py-2 rounded-full text-x font-medium ${getRoundBadgeColor(
                           item.Round
                         )}`}
                       >
@@ -376,7 +372,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
                         {item.Course}
                       </div>
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-4 py-4">
                       <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs font-medium">
                         {item.Quota}
                       </span>
