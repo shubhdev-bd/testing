@@ -16,7 +16,6 @@ import FeeStipendBondPage from "../../pages/FeeStipendBondPage";
 import ResultrankingPage from "../Resultrankingpage"; // Adjust path if needed
 
 import CounselingPage from "../counsellingpage";
-import FAQPage from "../FAQPage";
 
 /**
  * NEW COMMIT: Enhanced Router Component with Additional Data Pages
@@ -73,7 +72,7 @@ const AppRouter: React.FC = () => {
         />
         {/* <Route path="/resultranking" element={<ResultrankingPage />} /> */}
 
-        <Route path="/faq" element={<FAQPage />} />
+        {/* <Route path="/faq" element={<FAQPage />} /> */}
 
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />

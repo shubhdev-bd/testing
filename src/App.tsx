@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/new-commit/Header";
 import Sidebar from "./components/Sidebar";
-import StateTabs from "./components/StateTabs";
 import MainContent from "./components/MainContent";
 import NeetUGPage from "./pages/NeetUGPage";
 import NeetPGPage from "./pages/NeetPGPage";
@@ -18,7 +17,6 @@ import SupportPage from "./components/SupportPage";
 import FAQPage from "./components/FAQPage";
 import UniversitiesPage from "./components/UniversitiesPage";
 import ResultrankingPage from "./components/Resultrankingpage";
-import NIRFRankingsPage from "./components/NIRFRankingsPage";
 import CounselingPage from "./components/counsellingpage";
 import AIAssistant from "./components/AIAssistant";
 import WhatsAppSupport from "./components/WhatsAppSupport";
@@ -30,14 +28,14 @@ import WhatsAppSupport from "./components/WhatsAppSupport";
 function App() {
   const [activeSection, setActiveSection] = useState("home"); // Current dashboard section/page
   const [currentNeetPage, setCurrentNeetPage] = useState<string | null>(null); // NEET page state
-  const [activeTab, setActiveTab] = useState("all-india"); // StateTabs (if used)
-  const [searchValue, setSearchValue] = useState(""); // Search input value
+  const [activeTab] = useState("all-india"); // StateTabs (if used)
+  const [setSearchValue] = useState(""); // Search input value
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile sidebar
   const [showPlaceholder, setShowPlaceholder] = useState(false); // Placeholder for unknown sections
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false); // Sidebar collapse
 
   // Demo user
-  const [isLoggedIn] = useState(true);
+  // const [isLoggedIn] = useState(true);
   const [user] = useState({
     name: "Madhav Deshmukh",
     email: "madhav.deshmukh@gmail.com",

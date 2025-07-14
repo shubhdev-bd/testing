@@ -6,8 +6,6 @@ import {
   BookOpen,
   Filter,
   Search,
-  Download,
-  Eye,
 } from "lucide-react";
 
 interface CounselingPageProps {
@@ -48,7 +46,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
    */
   const parseCSV = (csvText: string): CounselingData[] => {
     const lines = csvText.trim().split("\n");
-    const headers = lines[0].split(",");
+    // const headers = lines[0].split(",");
 
     return lines.slice(1).map((line) => {
       const values = line.split(",");

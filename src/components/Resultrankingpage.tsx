@@ -51,7 +51,7 @@ const ResultrankingPage: React.FC<ResultrankingPageProps> = ({ onBack }) => {
    */
   const parseCSV = (csvText: string): CollegeData[] => {
     const lines = csvText.trim().split("\n");
-    const headers = lines[0].split(",");
+    // const headers = lines[0].split(",");
 
     return lines.slice(1).map((line) => {
       const values = line.split(",");
