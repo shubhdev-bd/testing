@@ -1,12 +1,12 @@
-# BD-counselling
+# BD-Counselling
 
 ## Medical Career Guidance Platform
 
-A comprehensive web application for NEET counselling, medical college admissions, and career guidance for medical aspirants.
+A comprehensive web application for NEET Counselling, medical college admissions, and career guidance for medical aspirants.
 
 ### Features
 
-- **Dashboard**: Interactive dashboard with counselling information and statistics
+- **Dashboard**: Interactive dashboard with Counselling information and statistics
 - **FAQ System**: Comprehensive FAQ with 20+ questions and categorized answers
 - **Universities**: Detailed college information with popup details
 - **AI Assistant**: "Ask Kodee" - AI chatbot for instant guidance
@@ -65,7 +65,7 @@ src/
 #### FAQ System
 
 - 20 comprehensive questions with detailed answers
-- Category-based filtering (NEET UG, NEET PG, INICET, counselling, etc.)
+- Category-based filtering (NEET UG, NEET PG, INICET, Counselling, etc.)
 - Search functionality
 - Expandable/collapsible answers
 
@@ -105,7 +105,7 @@ All components include comprehensive JSDoc comments explaining:
 - **Explore**: Medical courses and college information
 - **Rank Predictor**: NEET rank prediction tools
 - **Universities**: Detailed college listings
-- **counselling**: counselling process information
+- **Counselling**: Counselling process information
 - **Results & Rankings**: NEET results and ranking data
 - **FAQ**: Frequently asked questions
 - **Profile**: User profile management

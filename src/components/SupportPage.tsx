@@ -21,7 +21,7 @@ const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
   const supportCategories = [
     { id: "general", label: "General Inquiry", icon: "❓" },
     { id: "technical", label: "Technical Support", icon: "🔧" },
-    { id: "counselling", label: "counselling Help", icon: "🎓" },
+    { id: "Counselling", label: "Counselling Help", icon: "🎓" },
     { id: "billing", label: "Billing & Payments", icon: "💳" },
   ];
 
@@ -32,9 +32,9 @@ const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
         "Visit the official NEET website and enter your application number and password to download your scorecard.",
     },
     {
-      question: "What is the counselling process?",
+      question: "What is the Counselling process?",
       answer:
-        "The counselling process involves registration, choice filling, seat allotment, and document verification.",
+        "The Counselling process involves registration, choice filling, seat allotment, and document verification.",
     },
     {
       question: "How can I predict my college admission chances?",
@@ -42,7 +42,7 @@ const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
         "Use our College Predictor tool by entering your NEET rank and preferred states to get accurate predictions.",
     },
     {
-      question: "What documents are required for counselling?",
+      question: "What documents are required for Counselling?",
       answer:
         "You need NEET scorecard, class 12 marksheet, category certificate (if applicable), and identity proof.",
     },
@@ -111,7 +111,7 @@ const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
                   <div>
                     <p className="font-medium text-slate-800">Email Support</p>
                     <p className="text-sm text-slate-600">
-                      support@bd-counselling.com
+                      support@bd-Counselling.com
                     </p>
                     <p className="text-xs text-blue-600">
                       Response within 2 hours
@@ -253,7 +253,7 @@ const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
                   </div>
                   <p className="text-sm text-slate-700 mb-3">
                     "Excellent support team! They helped me throughout my
-                    counselling process."
+                    Counselling process."
                   </p>
                   <p className="text-xs text-slate-500">
                     - Priya Sharma, MBBS Student

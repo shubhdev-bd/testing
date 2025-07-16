@@ -33,11 +33,11 @@ const NeetUGPage: React.FC = () => {
       },
     },
     {
-      title: "UG counselling Process",
+      title: "UG Counselling Process",
       subtitle: "Step by step guidance",
       icon: GraduationCap,
       bgGradient: "from-green-400 to-green-600",
-      action: "Start counselling",
+      action: "Start Counselling",
       onClick: () => {
         window.open(
           "https://docs.google.com/forms/d/e/1FAIpQLSdwL6ERosbYYVBw5dUxQoVupLnzSDEtW8qe0UE-3FsptSB8sw/viewform?usp=preview",
@@ -83,7 +83,7 @@ const NeetUGPage: React.FC = () => {
     },
     {
       date: "JUL 1 2025",
-      title: "counselling Registration",
+      title: "Counselling Registration",
       subtitle: "Start Date",
       status: "upcoming",
     },
@@ -244,7 +244,7 @@ const NeetUGPage: React.FC = () => {
             <span className="text-blue-300">Medical Journey?</span>
           </h3>
           <p className="text-blue-100 mb-4 lg:mb-6 text-sm lg:text-lg">
-            Get expert guidance for NEET UG preparation and counselling
+            Get expert guidance for NEET UG preparation and Counselling
           </p>
           <a
             href="https://forms.gle/HE2RyX5CLh7j9FzX9"

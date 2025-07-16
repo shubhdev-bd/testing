@@ -75,9 +75,9 @@ const Sidebar: React.FC<SidebarProps> = ({
       color: "text-cyan-600",
     },
     {
-      id: "counselling",
+      id: "Counselling",
       icon: UserCheck,
-      label: "counselling",
+      label: "Counselling",
       hasSubmenu: false,
       color: "text-pink-600",
     },

@@ -9661,7 +9661,7 @@ var df = Do.exports,
                       children: i.jsx("h1", {
                         className:
                           "text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent",
-                        children: "BD-counselling",
+                        children: "BD-Counselling",
                       }),
                     }),
                   ],
@@ -9733,7 +9733,7 @@ var df = Do.exports,
                             i.jsx("h1", {
                               className:
                                 "text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent",
-                              children: "BD-counselling",
+                              children: "BD-Counselling",
                             }),
                             i.jsx("p", {
                               className: "text-xs text-slate-500",
@@ -9986,9 +9986,9 @@ var df = Do.exports,
           color: "text-cyan-600",
         },
         {
-          id: "counselling",
+          id: "Counselling",
           icon: If,
-          label: "counselling",
+          label: "Counselling",
           hasSubmenu: !1,
           color: "text-pink-600",
         },
@@ -10164,7 +10164,7 @@ var df = Do.exports,
           icon: Ks,
           bgGradient: "from-green-400 to-green-600",
           textColor: "text-white",
-          action: "Free counselling",
+          action: "Free Counselling",
           onClick: () => {
             window.open(
               "https://docs.google.com/forms/d/e/1FAIpQLSdwL6ERosbYYVBw5dUxQoVupLnzSDEtW8qe0UE-3FsptSB8sw/viewform?usp=preview",
@@ -10272,7 +10272,7 @@ var df = Do.exports,
                     }),
                     i.jsx("h1", {
                       className: "text-xl font-bold text-white mb-2",
-                      children: "All India counselling - UG Medical",
+                      children: "All India Counselling - UG Medical",
                     }),
                     i.jsx("p", {
                       className: "text-orange-100 mb-6 text-sm",
@@ -10323,7 +10323,7 @@ var df = Do.exports,
                         i.jsx("h1", {
                           className:
                             "text-3xl lg:text-4xl font-bold text-white",
-                          children: "NEET UG Medical counselling 2025",
+                          children: "NEET UG Medical Counselling 2025",
                         }),
                         i.jsx("div", {
                           className:
@@ -10583,7 +10583,7 @@ var df = Do.exports,
                 i.jsx("h3", {
                   className:
                     "text-xl lg:text-2xl font-bold text-slate-800 mb-6 lg:mb-8 text-center",
-                  children: "counselling Timeline 2025",
+                  children: "Counselling Timeline 2025",
                 }),
                 i.jsxs("div", {
                   className: "relative",
@@ -10824,42 +10824,40 @@ var df = Do.exports,
             }),
             i.jsx("div", {
               className: "space-y-3",
-              children: e
-                .slice(0, 3)
-                .map((c) =>
-                  i.jsx(
-                    "div",
-                    {
-                      className: `p-4 rounded-xl border-2 ${c.color} hover:shadow-lg transition-all duration-300 group`,
-                      children: i.jsxs("div", {
-                        className: "flex items-center justify-between",
-                        children: [
-                          i.jsxs("div", {
-                            className: "flex items-center space-x-3",
-                            children: [
-                              u(c.priority),
-                              i.jsxs("div", {
-                                children: [
-                                  i.jsx("h3", {
-                                    className:
-                                      "font-semibold text-slate-800 text-sm",
-                                    children: c.name,
-                                  }),
-                                  i.jsxs("p", {
-                                    className: "text-xs text-slate-600",
-                                    children: [c.count, " choices"],
-                                  }),
-                                ],
-                              }),
-                            ],
-                          }),
-                          i.jsx(Xn, { className: "w-4 h-4 text-slate-400" }),
-                        ],
-                      }),
-                    },
-                    c.id
-                  )
-                ),
+              children: e.slice(0, 3).map((c) =>
+                i.jsx(
+                  "div",
+                  {
+                    className: `p-4 rounded-xl border-2 ${c.color} hover:shadow-lg transition-all duration-300 group`,
+                    children: i.jsxs("div", {
+                      className: "flex items-center justify-between",
+                      children: [
+                        i.jsxs("div", {
+                          className: "flex items-center space-x-3",
+                          children: [
+                            u(c.priority),
+                            i.jsxs("div", {
+                              children: [
+                                i.jsx("h3", {
+                                  className:
+                                    "font-semibold text-slate-800 text-sm",
+                                  children: c.name,
+                                }),
+                                i.jsxs("p", {
+                                  className: "text-xs text-slate-600",
+                                  children: [c.count, " choices"],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        i.jsx(Xn, { className: "w-4 h-4 text-slate-400" }),
+                      ],
+                    }),
+                  },
+                  c.id
+                )
+              ),
             }),
             i.jsxs("button", {
               onClick: () => r(!0),
@@ -11150,7 +11148,7 @@ var df = Do.exports,
       [r, l] = P.useState(0),
       s = [
         "Initializing BD-Consulting Platform...",
-        "Loading Medical counselling Data...",
+        "Loading Medical Counselling Data...",
         "Preparing Your Dashboard...",
         "Almost Ready!",
       ];
@@ -11678,7 +11676,7 @@ var df = Do.exports,
       s = [
         { id: "general", label: "General Inquiry", icon: "❓" },
         { id: "technical", label: "Technical Support", icon: "🔧" },
-        { id: "counselling", label: "counselling Help", icon: "🎓" },
+        { id: "Counselling", label: "Counselling Help", icon: "🎓" },
         { id: "billing", label: "Billing & Payments", icon: "💳" },
       ],
       a = [
@@ -11688,9 +11686,9 @@ var df = Do.exports,
             "Visit the official NEET website and enter your application number and password to download your scorecard.",
         },
         {
-          question: "What is the counselling process?",
+          question: "What is the Counselling process?",
           answer:
-            "The counselling process involves registration, choice filling, seat allotment, and document verification.",
+            "The Counselling process involves registration, choice filling, seat allotment, and document verification.",
         },
         {
           question: "How can I predict my college admission chances?",
@@ -11698,7 +11696,7 @@ var df = Do.exports,
             "Use our College Predictor tool by entering your NEET rank and preferred states to get accurate predictions.",
         },
         {
-          question: "What documents are required for counselling?",
+          question: "What documents are required for Counselling?",
           answer:
             "You need NEET scorecard, class 12 marksheet, category certificate (if applicable), and identity proof.",
         },
@@ -11817,7 +11815,7 @@ var df = Do.exports,
                                     }),
                                     i.jsx("p", {
                                       className: "text-sm text-slate-600",
-                                      children: "support@bd-counselling.com",
+                                      children: "support@bd-Counselling.com",
                                     }),
                                     i.jsx("p", {
                                       className: "text-xs text-blue-600",
@@ -12072,7 +12070,7 @@ var df = Do.exports,
                                 i.jsx("p", {
                                   className: "text-sm text-slate-700 mb-3",
                                   children:
-                                    '"Excellent support team! They helped me throughout my counselling process."',
+                                    '"Excellent support team! They helped me throughout my Counselling process."',
                                 }),
                                 i.jsx("p", {
                                   className: "text-xs text-slate-500",
@@ -12130,15 +12128,15 @@ var df = Do.exports,
           id: 1,
           question: "How do I check my NEET UG 2025 result?",
           answer:
-            "To check your NEET UG 2025 result: 1) Visit the official website www.neet.nta.nic.in 2) Click on 'NEET UG Result 2025' link 3) Enter your application number and password 4) Download your scorecard for future reference. Keep multiple copies of your scorecard as it's required for counselling.",
+            "To check your NEET UG 2025 result: 1) Visit the official website www.neet.nta.nic.in 2) Click on 'NEET UG Result 2025' link 3) Enter your application number and password 4) Download your scorecard for future reference. Keep multiple copies of your scorecard as it's required for Counselling.",
           category: "neet-ug",
         },
         {
           id: 2,
-          question: "What is the NEET UG counselling process?",
+          question: "What is the NEET UG Counselling process?",
           answer:
-            "The NEET UG counselling process involves: 1) Registration on the official counselling website 2) Choice filling of colleges and courses 3) Seat allotment based on rank and preferences 4) Document verification at designated centers 5) Fee payment and admission confirmation. The process is conducted in multiple rounds.",
-          category: "counselling",
+            "The NEET UG Counselling process involves: 1) Registration on the official Counselling website 2) Choice filling of colleges and courses 3) Seat allotment based on rank and preferences 4) Document verification at designated centers 5) Fee payment and admission confirmation. The process is conducted in multiple rounds.",
+          category: "Counselling",
         },
         {
           id: 3,
@@ -12149,23 +12147,23 @@ var df = Do.exports,
         },
         {
           id: 4,
-          question: "What documents are required for NEET counselling?",
+          question: "What documents are required for NEET Counselling?",
           answer:
             "Required documents include: 1) NEET scorecard 2) Class 10th and 12th marksheets 3) Category certificate (if applicable) 4) Domicile certificate 5) Aadhar card 6) Passport size photographs 7) Medical fitness certificate 8) Character certificate. Ensure all documents are original with photocopies.",
-          category: "counselling",
+          category: "Counselling",
         },
         {
           id: 5,
           question: "What is NEET PG and how is it different from NEET UG?",
           answer:
-            "NEET PG is for admission to postgraduate medical courses (MD/MS/Diploma) while NEET UG is for undergraduate courses (MBBS/BDS). NEET PG requires an MBBS degree for eligibility, has different exam pattern, and separate counselling process. The competition is generally higher in NEET PG.",
+            "NEET PG is for admission to postgraduate medical courses (MD/MS/Diploma) while NEET UG is for undergraduate courses (MBBS/BDS). NEET PG requires an MBBS degree for eligibility, has different exam pattern, and separate Counselling process. The competition is generally higher in NEET PG.",
           category: "neet-pg",
         },
         {
           id: 6,
           question: "What is INICET and who can appear for it?",
           answer:
-            "INICET (Institute of National Importance Combined Entrance Test) is for admission to PG medical courses in AIIMS, JIPMER, PGIMER, and NIMHANS. Only MBBS graduates are eligible. It's conducted separately from NEET PG and has its own counselling process.",
+            "INICET (Institute of National Importance Combined Entrance Test) is for admission to PG medical courses in AIIMS, JIPMER, PGIMER, and NIMHANS. Only MBBS graduates are eligible. It's conducted separately from NEET PG and has its own Counselling process.",
           category: "inicet",
         },
         {
@@ -12194,7 +12192,7 @@ var df = Do.exports,
           question: "What is the difference between AIQ and State quota?",
           answer:
             "AIQ (All India Quota) reserves 15% seats for all India merit, open to candidates from any state. State quota reserves 85% seats for state domicile candidates. AIQ has higher cutoffs but more college options across India.",
-          category: "counselling",
+          category: "Counselling",
         },
         {
           id: 11,
@@ -12215,7 +12213,7 @@ var df = Do.exports,
           question: "How to choose the right medical college?",
           answer:
             "Consider factors: 1) NIRF ranking and accreditation 2) Faculty quality and infrastructure 3) Hospital facilities and patient load 4) Fee structure and scholarships 5) Location and hostel facilities 6) Placement and PG entrance success rate.",
-          category: "counselling",
+          category: "Counselling",
         },
         {
           id: 14,
@@ -12223,7 +12221,7 @@ var df = Do.exports,
             "What is the fee structure for government medical colleges?",
           answer:
             "Government medical college fees vary by state: 1) Central government colleges: ₹5,000-50,000 per year 2) State government colleges: ₹10,000-1,00,000 per year 3) Deemed universities: ₹5,00,000-25,00,000 per year 4) Private colleges: ₹10,00,000-50,00,000 per year.",
-          category: "counselling",
+          category: "Counselling",
         },
         {
           id: 15,
@@ -12243,7 +12241,7 @@ var df = Do.exports,
           id: 17,
           question: "How to get admission in AIIMS through INICET?",
           answer:
-            "AIIMS admission through INICET: 1) Qualify INICET exam 2) Participate in INICET counselling 3) Choice filling for AIIMS centers 4) Seat allotment based on rank 5) Document verification 6) Fee payment and admission confirmation.",
+            "AIIMS admission through INICET: 1) Qualify INICET exam 2) Participate in INICET Counselling 3) Choice filling for AIIMS centers 4) Seat allotment based on rank 5) Document verification 6) Fee payment and admission confirmation.",
           category: "inicet",
         },
         {
@@ -12255,10 +12253,10 @@ var df = Do.exports,
         },
         {
           id: 19,
-          question: "How to apply for state quota counselling?",
+          question: "How to apply for state quota Counselling?",
           answer:
-            "State quota counselling process: 1) Check state counselling authority website 2) Register with required documents 3) Pay counselling fee 4) Fill choices of colleges 5) Attend counselling rounds 6) Document verification 7) Seat confirmation and fee payment.",
-          category: "counselling",
+            "State quota Counselling process: 1) Check state Counselling authority website 2) Register with required documents 3) Pay Counselling fee 4) Fill choices of colleges 5) Attend Counselling rounds 6) Document verification 7) Seat confirmation and fee payment.",
+          category: "Counselling",
         },
         {
           id: 20,
@@ -12290,10 +12288,10 @@ var df = Do.exports,
         },
         {
           id: 24,
-          question: "What is the counselling fee for NEET UG?",
+          question: "What is the Counselling fee for NEET UG?",
           answer:
-            "NEET UG counselling fees vary: 1) AIQ counselling: ₹1,000 for registration 2) State counselling: ₹500-2,000 depending on state 3) Security deposit: ₹2,00,000 for government colleges 4) Additional fees for choice modification and upgradation.",
-          category: "counselling",
+            "NEET UG Counselling fees vary: 1) AIQ Counselling: ₹1,000 for registration 2) State Counselling: ₹500-2,000 depending on state 3) Security deposit: ₹2,00,000 for government colleges 4) Additional fees for choice modification and upgradation.",
+          category: "Counselling",
         },
         {
           id: 25,
@@ -12313,7 +12311,7 @@ var df = Do.exports,
           id: 27,
           question: "How to check NEET PG result?",
           answer:
-            "NEET PG result checking: 1) Visit NBE official website 2) Click on NEET PG result link 3) Enter roll number and password 4) Download scorecard 5) Check rank and percentile 6) Save multiple copies for counselling.",
+            "NEET PG result checking: 1) Visit NBE official website 2) Click on NEET PG result link 3) Enter roll number and password 4) Download scorecard 5) Check rank and percentile 6) Save multiple copies for Counselling.",
           category: "neet-pg",
         },
         {
@@ -12321,22 +12319,22 @@ var df = Do.exports,
           question: "What is the bond policy for medical colleges?",
           answer:
             "Bond policies vary by state: 1) Service bond: 1-7 years in government service 2) Bond amount: ₹10 lakhs to ₹1 crore 3) Rural service mandatory in some states 4) Private colleges may have different terms 5) Check specific state policies before admission.",
-          category: "counselling",
+          category: "Counselling",
         },
         {
           id: 29,
           question: "How to apply for management quota seats?",
           answer:
-            "Management quota application: 1) Contact college directly 2) Submit required documents 3) Appear for college interview 4) Pay higher fees as per college norms 5) No counselling required 6) Direct admission based on NEET score and college criteria.",
-          category: "counselling",
+            "Management quota application: 1) Contact college directly 2) Submit required documents 3) Appear for college interview 4) Pay higher fees as per college norms 5) No Counselling required 6) Direct admission based on NEET score and college criteria.",
+          category: "Counselling",
         },
         {
           id: 30,
           question:
             "What is the difference between government and private medical colleges?",
           answer:
-            "Key differences: 1) Fee: Government colleges have lower fees 2) Infrastructure: Both can have good facilities 3) Faculty: Government colleges often have experienced faculty 4) Admission: Government through counselling, private through management quota 5) Bond: Government colleges may have service bonds.",
-          category: "counselling",
+            "Key differences: 1) Fee: Government colleges have lower fees 2) Infrastructure: Both can have good facilities 3) Faculty: Government colleges often have experienced faculty 4) Admission: Government through Counselling, private through management quota 5) Bond: Government colleges may have service bonds.",
+          category: "Counselling",
         },
         {
           id: 31,
@@ -12347,17 +12345,17 @@ var df = Do.exports,
         },
         {
           id: 32,
-          question: "What is the INICET counselling process?",
+          question: "What is the INICET Counselling process?",
           answer:
-            "INICET counselling: 1) Registration on official website 2) Choice filling for institutes 3) Seat allotment based on rank 4) Document verification 5) Fee payment 6) Admission confirmation 7) Multiple rounds conducted.",
+            "INICET Counselling: 1) Registration on official website 2) Choice filling for institutes 3) Seat allotment based on rank 4) Document verification 5) Fee payment 6) Admission confirmation 7) Multiple rounds conducted.",
           category: "inicet",
         },
         {
           id: 33,
-          question: "How to get domicile certificate for medical counselling?",
+          question: "How to get domicile certificate for medical Counselling?",
           answer:
-            "Domicile certificate process: 1) Apply to district collector office 2) Submit required documents (birth certificate, school certificates) 3) Pay prescribed fees 4) Verification process 5) Certificate issuance 6) Valid for counselling in respective state.",
-          category: "counselling",
+            "Domicile certificate process: 1) Apply to district collector office 2) Submit required documents (birth certificate, school certificates) 3) Pay prescribed fees 4) Verification process 5) Certificate issuance 6) Valid for Counselling in respective state.",
+          category: "Counselling",
         },
         {
           id: 34,
@@ -12375,17 +12373,17 @@ var df = Do.exports,
         },
         {
           id: 36,
-          question: "What is the NEET PG counselling schedule?",
+          question: "What is the NEET PG Counselling schedule?",
           answer:
-            "NEET PG counselling timeline: 1) Registration: Usually starts 2-3 weeks after result 2) Choice filling: 3-4 days 3) Seat allotment: Multiple rounds 4) Document verification: 2-3 days per round 5) Classes start: As per academic calendar 6) Check official notifications for exact dates.",
+            "NEET PG Counselling timeline: 1) Registration: Usually starts 2-3 weeks after result 2) Choice filling: 3-4 days 3) Seat allotment: Multiple rounds 4) Document verification: 2-3 days per round 5) Classes start: As per academic calendar 6) Check official notifications for exact dates.",
           category: "neet-pg",
         },
         {
           id: 37,
           question: "How to get category certificate for NEET?",
           answer:
-            "Category certificate process: 1) Apply to competent authority (Tehsildar/SDM) 2) Submit required documents 3) Income certificate for EWS 4) Caste certificate for SC/ST/OBC 5) Validity: Usually 1-3 years 6) Required for counselling and admission.",
-          category: "counselling",
+            "Category certificate process: 1) Apply to competent authority (Tehsildar/SDM) 2) Submit required documents 3) Income certificate for EWS 4) Caste certificate for SC/ST/OBC 5) Validity: Usually 1-3 years 6) Required for Counselling and admission.",
+          category: "Counselling",
         },
         {
           id: 38,
@@ -12406,7 +12404,7 @@ var df = Do.exports,
           question: "What is the medical fitness requirement for MBBS?",
           answer:
             "Medical fitness criteria: 1) Physical and mental fitness 2) Vision: 6/6 in one eye, 6/60 in other 3) Hearing: Normal hearing ability 4) No communicable diseases 5) Medical examination by authorized doctor 6) Fitness certificate required for admission.",
-          category: "counselling",
+          category: "Counselling",
         },
         {
           id: 41,
@@ -12420,8 +12418,8 @@ var df = Do.exports,
           question:
             "What is the difference between deemed and private universities?",
           answer:
-            "Deemed vs Private: 1) Deemed: Government recognition, autonomous status 2) Private: Privately funded, affiliated to state universities 3) Fee structure: Both generally expensive 4) Quality: Varies by institution 5) Recognition: Both recognized for practice 6) Admission: Through NEET counselling or management quota.",
-          category: "counselling",
+            "Deemed vs Private: 1) Deemed: Government recognition, autonomous status 2) Private: Privately funded, affiliated to state universities 3) Fee structure: Both generally expensive 4) Quality: Varies by institution 5) Recognition: Both recognized for practice 6) Admission: Through NEET Counselling or management quota.",
+          category: "Counselling",
         },
         {
           id: 43,
@@ -12434,7 +12432,7 @@ var df = Do.exports,
           id: 44,
           question: "What is the INICET result declaration process?",
           answer:
-            "INICET result process: 1) Results declared on official website 2) Scorecard download available 3) Rank and percentile provided 4) Category-wise results 5) counselling schedule announced 6) Merit list preparation for counselling.",
+            "INICET result process: 1) Results declared on official website 2) Scorecard download available 3) Rank and percentile provided 4) Category-wise results 5) Counselling schedule announced 6) Merit list preparation for Counselling.",
           category: "inicet",
         },
         {
@@ -12460,17 +12458,17 @@ var df = Do.exports,
         },
         {
           id: 48,
-          question: "What is the INICET counselling fee structure?",
+          question: "What is the INICET Counselling fee structure?",
           answer:
-            "INICET counselling fees: 1) Registration fee varies by institute 2) Security deposit required 3) counselling participation fee 4) Document verification charges 5) Seat acceptance fee 6) Check individual institute notifications for exact amounts.",
+            "INICET Counselling fees: 1) Registration fee varies by institute 2) Security deposit required 3) Counselling participation fee 4) Document verification charges 5) Seat acceptance fee 6) Check individual institute notifications for exact amounts.",
           category: "inicet",
         },
         {
           id: 49,
-          question: "How to handle NEET counselling stress?",
+          question: "How to handle NEET Counselling stress?",
           answer:
-            "Managing counselling stress: 1) Stay informed about process 2) Prepare documents in advance 3) Have backup options ready 4) Seek family and peer support 5) Practice relaxation techniques 6) Stay positive and focused 7) Consult counselors if needed.",
-          category: "counselling",
+            "Managing Counselling stress: 1) Stay informed about process 2) Prepare documents in advance 3) Have backup options ready 4) Seek family and peer support 5) Practice relaxation techniques 6) Stay positive and focused 7) Consult counselors if needed.",
+          category: "Counselling",
         },
         {
           id: 50,
@@ -12485,7 +12483,7 @@ var df = Do.exports,
         { id: "neet-ug", label: "NEET UG", icon: Xi },
         { id: "neet-pg", label: "NEET PG", icon: It },
         { id: "inicet", label: "INICET", icon: fl },
-        { id: "counselling", label: "counselling", icon: jn },
+        { id: "Counselling", label: "Counselling", icon: jn },
         { id: "tools", label: "Tools", icon: Xi },
         { id: "career", label: "Career", icon: It },
       ],
@@ -12543,7 +12541,7 @@ var df = Do.exports,
                   i.jsx("p", {
                     className: "text-blue-100 text-lg",
                     children:
-                      "Find answers to common questions about NEET, counselling, and medical admissions",
+                      "Find answers to common questions about NEET, Counselling, and medical admissions",
                   }),
                 ],
               }),
@@ -14424,19 +14422,17 @@ var df = Do.exports,
                       i.jsxs("div", {
                         className: "flex flex-wrap gap-1 mb-3",
                         children: [
-                          m.programs
-                            .slice(0, 3)
-                            .map((x) =>
-                              i.jsx(
-                                "span",
-                                {
-                                  className:
-                                    "px-1.5 py-0.5 bg-slate-100 text-slate-700 rounded text-xs",
-                                  children: x,
-                                },
-                                x
-                              )
-                            ),
+                          m.programs.slice(0, 3).map((x) =>
+                            i.jsx(
+                              "span",
+                              {
+                                className:
+                                  "px-1.5 py-0.5 bg-slate-100 text-slate-700 rounded text-xs",
+                                children: x,
+                              },
+                              x
+                            )
+                          ),
                           m.programs.length > 3 &&
                             i.jsxs("span", {
                               className:
@@ -14745,7 +14741,7 @@ var df = Do.exports,
       [a, o] = P.useState(""),
       u = [
         "How to check NEET results?",
-        "What is the counselling process?",
+        "What is the Counselling process?",
         "College admission requirements",
         "NEET rank predictor",
         "Document verification process",
@@ -14774,11 +14770,11 @@ var df = Do.exports,
         const x = m.toLowerCase();
         return x.includes("neet") && x.includes("result")
           ? "To check your NEET results: 1) Visit www.neet.nta.nic.in 2) Enter your application number and password 3) Download your scorecard. Need help with anything else?"
-          : x.includes("counselling")
-          ? "The counselling process includes: Registration → Choice Filling → Seat Allotment → Document Verification → Fee Payment. Which step would you like to know more about?"
+          : x.includes("Counselling")
+          ? "The Counselling process includes: Registration → Choice Filling → Seat Allotment → Document Verification → Fee Payment. Which step would you like to know more about?"
           : x.includes("college") || x.includes("admission")
           ? "For college admissions, you'll need: NEET scorecard, Class 12 marksheet, category certificate (if applicable), and identity proof. Would you like help with college predictions?"
-          : "I understand you're asking about medical career guidance. Could you please be more specific? You can ask about NEET results, counselling process, college admissions, or document requirements.";
+          : "I understand you're asking about medical career guidance. Could you please be more specific? You can ask about NEET results, Counselling process, college admissions, or document requirements.";
       },
       p = (m) => {
         o(m), c();
@@ -14906,20 +14902,18 @@ var df = Do.exports,
                         }),
                         i.jsx("div", {
                           className: "flex flex-wrap gap-2 mb-4",
-                          children: u
-                            .slice(0, 3)
-                            .map((m, x) =>
-                              i.jsx(
-                                "button",
-                                {
-                                  onClick: () => p(m),
-                                  className:
-                                    "px-3 py-1 bg-slate-100 hover:bg-slate-200 rounded-full text-xs text-slate-700 transition-colors",
-                                  children: m,
-                                },
-                                x
-                              )
-                            ),
+                          children: u.slice(0, 3).map((m, x) =>
+                            i.jsx(
+                              "button",
+                              {
+                                onClick: () => p(m),
+                                className:
+                                  "px-3 py-1 bg-slate-100 hover:bg-slate-200 rounded-full text-xs text-slate-700 transition-colors",
+                                children: m,
+                              },
+                              x
+                            )
+                          ),
                         }),
                       ],
                     }),
@@ -14934,7 +14928,7 @@ var df = Do.exports,
                             onChange: (m) => o(m.target.value),
                             onKeyPress: (m) => m.key === "Enter" && c(),
                             placeholder:
-                              "Ask me anything about medical counselling...",
+                              "Ask me anything about medical Counselling...",
                             className:
                               "flex-1 p-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm",
                           }),
@@ -14964,7 +14958,7 @@ var df = Do.exports,
       n = () => {
         const r = "919876543210",
           l = encodeURIComponent(
-            "Hi! I need help with medical counselling guidance."
+            "Hi! I need help with medical Counselling guidance."
           ),
           s = `https://wa.me/${r}?text=${l}`;
         window.open(s, "_blank");
@@ -15016,7 +15010,7 @@ var df = Do.exports,
               i.jsx("p", {
                 className: "text-sm text-slate-700 mb-4",
                 children:
-                  "Need instant help? Chat with our counselling experts on WhatsApp for immediate assistance.",
+                  "Need instant help? Chat with our Counselling experts on WhatsApp for immediate assistance.",
               }),
               i.jsxs("button", {
                 onClick: n,

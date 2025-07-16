@@ -17,7 +17,7 @@ import SupportPage from "./components/SupportPage";
 import FAQPage from "./components/FAQPage";
 import UniversitiesPage from "./components/UniversitiesPage";
 import ResultrankingPage from "./components/Resultrankingpage";
-import counsellingPage from "./components/counsellingpage";
+import CounsellingPage from "./components/Counsellingpage";
 import AIAssistant from "./components/AIAssistant";
 import WhatsAppSupport from "./components/WhatsAppSupport";
 
@@ -54,7 +54,7 @@ function App() {
     // Show placeholder for unknown sections
     if (
       section === "results" ||
-      section === "counselling" ||
+      section === "Counselling" ||
       section === "allotments" ||
       section === "closing-ranks" ||
       section === "seat-matrix" ||
@@ -135,9 +135,9 @@ function App() {
       return <ResultrankingPage onBack={handleBackToDashboard} />;
     }
 
-    // counselling page
-    if (activeSection === "counselling" || activeSection === "counselling") {
-      return <counsellingPage onBack={handleBackToDashboard} />;
+    // Counselling page
+    if (activeSection === "Counselling" || activeSection === "Counselling") {
+      return <CounsellingPage onBack={handleBackToDashboard} />;
     }
 
     // NEW COMMIT: Data pages
@@ -278,7 +278,7 @@ function App() {
     activeSection === "closing-ranks" ||
     activeSection === "seat-matrix" ||
     activeSection === "fee-stipend-bond" ||
-    activeSection === "counselling" ||
+    activeSection === "Counselling" ||
     activeSection === "profile" ||
     activeSection === "support" ||
     activeSection === "faq" ||

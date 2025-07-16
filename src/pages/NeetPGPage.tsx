@@ -31,13 +31,13 @@ const NeetPGPage: React.FC = () => {
       },
     },
     {
-      title: "PG counselling Process",
+      title: "PG Counselling Process",
       subtitle: "MD/MS admission guidance",
       icon: Stethoscope,
       bgGradient: "from-purple-400 to-indigo-600",
-      action: "Start counselling",
+      action: "Start Counselling",
       onClick: () => {
-        console.log("PG counselling clicked");
+        console.log("PG Counselling clicked");
       },
     },
     {
@@ -78,7 +78,7 @@ const NeetPGPage: React.FC = () => {
     },
     {
       date: "AUG 5 2025",
-      title: "counselling Registration",
+      title: "Counselling Registration",
       subtitle: "Start Date",
       status: "upcoming",
     },

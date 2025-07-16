@@ -43,7 +43,7 @@ const AIAssistant: React.FC = () => {
   // Quick question templates for easy access
   const quickQuestions = [
     "How to check NEET results?",
-    "What is the counselling process?",
+    "What is the Counselling process?",
     "College admission requirements",
     "NEET rank predictor",
     "Document verification process",
@@ -131,8 +131,8 @@ const AIAssistant: React.FC = () => {
       return "Hello! 😊 I'm Samaira. How can I assist you today?";
     }
 
-    if (lowerMessage.includes("counselling")) {
-      return "The counselling process includes: Registration → Choice Filling → Seat Allotment → Document Verification → Fee Payment. Which step would you like to know more about?";
+    if (lowerMessage.includes("Counselling")) {
+      return "The Counselling process includes: Registration → Choice Filling → Seat Allotment → Document Verification → Fee Payment. Which step would you like to know more about?";
     } else if (
       lowerMessage.includes("college") ||
       lowerMessage.includes("admission")
@@ -149,7 +149,7 @@ const AIAssistant: React.FC = () => {
     ) {
       return "I'm doing great, thank you! How can I help you with your medical career today?";
     } else {
-      return "I understand you're asking about medical career guidance. Could you please be more specific? You can ask about NEET results, counselling process, college admissions, or document requirements.";
+      return "I understand you're asking about medical career guidance. Could you please be more specific? You can ask about NEET results, Counselling process, college admissions, or document requirements.";
     }
   };
 
@@ -299,7 +299,7 @@ const AIAssistant: React.FC = () => {
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
-                  placeholder="Ask me anything about medical counselling..."
+                  placeholder="Ask me anything about medical Counselling..."
                   className="flex-1 p-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm text-black"
                 />
                 <button

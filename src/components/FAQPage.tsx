@@ -40,15 +40,15 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       id: 1,
       question: "How do I check my NEET UG 2025 result?",
       answer:
-        "To check your NEET UG 2025 result: 1) Visit the official website www.neet.nta.nic.in 2) Click on 'NEET UG Result 2025' link 3) Enter your application number and password 4) Download your scorecard for future reference. Keep multiple copies of your scorecard as it's required for counselling.",
+        "To check your NEET UG 2025 result: 1) Visit the official website www.neet.nta.nic.in 2) Click on 'NEET UG Result 2025' link 3) Enter your application number and password 4) Download your scorecard for future reference. Keep multiple copies of your scorecard as it's required for Counselling.",
       category: "neet-ug",
     },
     {
       id: 2,
-      question: "What is the NEET UG counselling process?",
+      question: "What is the NEET UG Counselling process?",
       answer:
-        "The NEET UG counselling process involves: 1) Registration on the official counselling website 2) Choice filling of colleges and courses 3) Seat allotment based on rank and preferences 4) Document verification at designated centers 5) Fee payment and admission confirmation. The process is conducted in multiple rounds.",
-      category: "counselling",
+        "The NEET UG Counselling process involves: 1) Registration on the official Counselling website 2) Choice filling of colleges and courses 3) Seat allotment based on rank and preferences 4) Document verification at designated centers 5) Fee payment and admission confirmation. The process is conducted in multiple rounds.",
+      category: "Counselling",
     },
     {
       id: 3,
@@ -59,23 +59,23 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
     },
     {
       id: 4,
-      question: "What documents are required for NEET counselling?",
+      question: "What documents are required for NEET Counselling?",
       answer:
         "Required documents include: 1) NEET scorecard 2) Class 10th and 12th marksheets 3) Category certificate (if applicable) 4) Domicile certificate 5) Aadhar card 6) Passport size photographs 7) Medical fitness certificate 8) Character certificate. Ensure all documents are original with photocopies.",
-      category: "counselling",
+      category: "Counselling",
     },
     {
       id: 5,
       question: "What is NEET PG and how is it different from NEET UG?",
       answer:
-        "NEET PG is for admission to postgraduate medical courses (MD/MS/Diploma) while NEET UG is for undergraduate courses (MBBS/BDS). NEET PG requires an MBBS degree for eligibility, has different exam pattern, and separate counselling process. The competition is generally higher in NEET PG.",
+        "NEET PG is for admission to postgraduate medical courses (MD/MS/Diploma) while NEET UG is for undergraduate courses (MBBS/BDS). NEET PG requires an MBBS degree for eligibility, has different exam pattern, and separate Counselling process. The competition is generally higher in NEET PG.",
       category: "neet-pg",
     },
     {
       id: 6,
       question: "What is INICET and who can appear for it?",
       answer:
-        "INICET (Institute of National Importance Combined Entrance Test) is for admission to PG medical courses in AIIMS, JIPMER, PGIMER, and NIMHANS. Only MBBS graduates are eligible. It's conducted separately from NEET PG and has its own counselling process.",
+        "INICET (Institute of National Importance Combined Entrance Test) is for admission to PG medical courses in AIIMS, JIPMER, PGIMER, and NIMHANS. Only MBBS graduates are eligible. It's conducted separately from NEET PG and has its own Counselling process.",
       category: "inicet",
     },
     {
@@ -104,7 +104,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       question: "What is the difference between AIQ and State quota?",
       answer:
         "AIQ (All India Quota) reserves 15% seats for all India merit, open to candidates from any state. State quota reserves 85% seats for state domicile candidates. AIQ has higher cutoffs but more college options across India.",
-      category: "counselling",
+      category: "Counselling",
     },
     {
       id: 11,
@@ -125,14 +125,14 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       question: "How to choose the right medical college?",
       answer:
         "Consider factors: 1) NIRF ranking and accreditation 2) Faculty quality and infrastructure 3) Hospital facilities and patient load 4) Fee structure and scholarships 5) Location and hostel facilities 6) Placement and PG entrance success rate.",
-      category: "counselling",
+      category: "Counselling",
     },
     {
       id: 14,
       question: "What is the fee structure for government medical colleges?",
       answer:
         "Government medical college fees vary by state: 1) Central government colleges: ₹5,000-50,000 per year 2) State government colleges: ₹10,000-1,00,000 per year 3) Deemed universities: ₹5,00,000-25,00,000 per year 4) Private colleges: ₹10,00,000-50,00,000 per year.",
-      category: "counselling",
+      category: "Counselling",
     },
     {
       id: 15,
@@ -152,7 +152,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       id: 17,
       question: "How to get admission in AIIMS through INICET?",
       answer:
-        "AIIMS admission through INICET: 1) Qualify INICET exam 2) Participate in INICET counselling 3) Choice filling for AIIMS centers 4) Seat allotment based on rank 5) Document verification 6) Fee payment and admission confirmation.",
+        "AIIMS admission through INICET: 1) Qualify INICET exam 2) Participate in INICET Counselling 3) Choice filling for AIIMS centers 4) Seat allotment based on rank 5) Document verification 6) Fee payment and admission confirmation.",
       category: "inicet",
     },
     {
@@ -164,10 +164,10 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
     },
     {
       id: 19,
-      question: "How to apply for state quota counselling?",
+      question: "How to apply for state quota Counselling?",
       answer:
-        "State quota counselling process: 1) Check state counselling authority website 2) Register with required documents 3) Pay counselling fee 4) Fill choices of colleges 5) Attend counselling rounds 6) Document verification 7) Seat confirmation and fee payment.",
-      category: "counselling",
+        "State quota Counselling process: 1) Check state Counselling authority website 2) Register with required documents 3) Pay Counselling fee 4) Fill choices of colleges 5) Attend Counselling rounds 6) Document verification 7) Seat confirmation and fee payment.",
+      category: "Counselling",
     },
     {
       id: 20,
@@ -199,10 +199,10 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
     },
     {
       id: 24,
-      question: "What is the counselling fee for NEET UG?",
+      question: "What is the Counselling fee for NEET UG?",
       answer:
-        "NEET UG counselling fees vary: 1) AIQ counselling: ₹1,000 for registration 2) State counselling: ₹500-2,000 depending on state 3) Security deposit: ₹2,00,000 for government colleges 4) Additional fees for choice modification and upgradation.",
-      category: "counselling",
+        "NEET UG Counselling fees vary: 1) AIQ Counselling: ₹1,000 for registration 2) State Counselling: ₹500-2,000 depending on state 3) Security deposit: ₹2,00,000 for government colleges 4) Additional fees for choice modification and upgradation.",
+      category: "Counselling",
     },
     {
       id: 25,
@@ -222,7 +222,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       id: 27,
       question: "How to check NEET PG result?",
       answer:
-        "NEET PG result checking: 1) Visit NBE official website 2) Click on NEET PG result link 3) Enter roll number and password 4) Download scorecard 5) Check rank and percentile 6) Save multiple copies for counselling.",
+        "NEET PG result checking: 1) Visit NBE official website 2) Click on NEET PG result link 3) Enter roll number and password 4) Download scorecard 5) Check rank and percentile 6) Save multiple copies for Counselling.",
       category: "neet-pg",
     },
     {
@@ -230,22 +230,22 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       question: "What is the bond policy for medical colleges?",
       answer:
         "Bond policies vary by state: 1) Service bond: 1-7 years in government service 2) Bond amount: ₹10 lakhs to ₹1 crore 3) Rural service mandatory in some states 4) Private colleges may have different terms 5) Check specific state policies before admission.",
-      category: "counselling",
+      category: "Counselling",
     },
     {
       id: 29,
       question: "How to apply for management quota seats?",
       answer:
-        "Management quota application: 1) Contact college directly 2) Submit required documents 3) Appear for college interview 4) Pay higher fees as per college norms 5) No counselling required 6) Direct admission based on NEET score and college criteria.",
-      category: "counselling",
+        "Management quota application: 1) Contact college directly 2) Submit required documents 3) Appear for college interview 4) Pay higher fees as per college norms 5) No Counselling required 6) Direct admission based on NEET score and college criteria.",
+      category: "Counselling",
     },
     {
       id: 30,
       question:
         "What is the difference between government and private medical colleges?",
       answer:
-        "Key differences: 1) Fee: Government colleges have lower fees 2) Infrastructure: Both can have good facilities 3) Faculty: Government colleges often have experienced faculty 4) Admission: Government through counselling, private through management quota 5) Bond: Government colleges may have service bonds.",
-      category: "counselling",
+        "Key differences: 1) Fee: Government colleges have lower fees 2) Infrastructure: Both can have good facilities 3) Faculty: Government colleges often have experienced faculty 4) Admission: Government through Counselling, private through management quota 5) Bond: Government colleges may have service bonds.",
+      category: "Counselling",
     },
     {
       id: 31,
@@ -256,17 +256,17 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
     },
     {
       id: 32,
-      question: "What is the INICET counselling process?",
+      question: "What is the INICET Counselling process?",
       answer:
-        "INICET counselling: 1) Registration on official website 2) Choice filling for institutes 3) Seat allotment based on rank 4) Document verification 5) Fee payment 6) Admission confirmation 7) Multiple rounds conducted.",
+        "INICET Counselling: 1) Registration on official website 2) Choice filling for institutes 3) Seat allotment based on rank 4) Document verification 5) Fee payment 6) Admission confirmation 7) Multiple rounds conducted.",
       category: "inicet",
     },
     {
       id: 33,
-      question: "How to get domicile certificate for medical counselling?",
+      question: "How to get domicile certificate for medical Counselling?",
       answer:
-        "Domicile certificate process: 1) Apply to district collector office 2) Submit required documents (birth certificate, school certificates) 3) Pay prescribed fees 4) Verification process 5) Certificate issuance 6) Valid for counselling in respective state.",
-      category: "counselling",
+        "Domicile certificate process: 1) Apply to district collector office 2) Submit required documents (birth certificate, school certificates) 3) Pay prescribed fees 4) Verification process 5) Certificate issuance 6) Valid for Counselling in respective state.",
+      category: "Counselling",
     },
     {
       id: 34,
@@ -284,17 +284,17 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
     },
     {
       id: 36,
-      question: "What is the NEET PG counselling schedule?",
+      question: "What is the NEET PG Counselling schedule?",
       answer:
-        "NEET PG counselling timeline: 1) Registration: Usually starts 2-3 weeks after result 2) Choice filling: 3-4 days 3) Seat allotment: Multiple rounds 4) Document verification: 2-3 days per round 5) Classes start: As per academic calendar 6) Check official notifications for exact dates.",
+        "NEET PG Counselling timeline: 1) Registration: Usually starts 2-3 weeks after result 2) Choice filling: 3-4 days 3) Seat allotment: Multiple rounds 4) Document verification: 2-3 days per round 5) Classes start: As per academic calendar 6) Check official notifications for exact dates.",
       category: "neet-pg",
     },
     {
       id: 37,
       question: "How to get category certificate for NEET?",
       answer:
-        "Category certificate process: 1) Apply to competent authority (Tehsildar/SDM) 2) Submit required documents 3) Income certificate for EWS 4) Caste certificate for SC/ST/OBC 5) Validity: Usually 1-3 years 6) Required for counselling and admission.",
-      category: "counselling",
+        "Category certificate process: 1) Apply to competent authority (Tehsildar/SDM) 2) Submit required documents 3) Income certificate for EWS 4) Caste certificate for SC/ST/OBC 5) Validity: Usually 1-3 years 6) Required for Counselling and admission.",
+      category: "Counselling",
     },
     {
       id: 38,
@@ -315,7 +315,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       question: "What is the medical fitness requirement for MBBS?",
       answer:
         "Medical fitness criteria: 1) Physical and mental fitness 2) Vision: 6/6 in one eye, 6/60 in other 3) Hearing: Normal hearing ability 4) No communicable diseases 5) Medical examination by authorized doctor 6) Fitness certificate required for admission.",
-      category: "counselling",
+      category: "Counselling",
     },
     {
       id: 41,
@@ -329,8 +329,8 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       question:
         "What is the difference between deemed and private universities?",
       answer:
-        "Deemed vs Private: 1) Deemed: Government recognition, autonomous status 2) Private: Privately funded, affiliated to state universities 3) Fee structure: Both generally expensive 4) Quality: Varies by institution 5) Recognition: Both recognized for practice 6) Admission: Through NEET counselling or management quota.",
-      category: "counselling",
+        "Deemed vs Private: 1) Deemed: Government recognition, autonomous status 2) Private: Privately funded, affiliated to state universities 3) Fee structure: Both generally expensive 4) Quality: Varies by institution 5) Recognition: Both recognized for practice 6) Admission: Through NEET Counselling or management quota.",
+      category: "Counselling",
     },
     {
       id: 43,
@@ -343,7 +343,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
       id: 44,
       question: "What is the INICET result declaration process?",
       answer:
-        "INICET result process: 1) Results declared on official website 2) Scorecard download available 3) Rank and percentile provided 4) Category-wise results 5) counselling schedule announced 6) Merit list preparation for counselling.",
+        "INICET result process: 1) Results declared on official website 2) Scorecard download available 3) Rank and percentile provided 4) Category-wise results 5) Counselling schedule announced 6) Merit list preparation for Counselling.",
       category: "inicet",
     },
     {
@@ -369,17 +369,17 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
     },
     {
       id: 48,
-      question: "What is the INICET counselling fee structure?",
+      question: "What is the INICET Counselling fee structure?",
       answer:
-        "INICET counselling fees: 1) Registration fee varies by institute 2) Security deposit required 3) counselling participation fee 4) Document verification charges 5) Seat acceptance fee 6) Check individual institute notifications for exact amounts.",
+        "INICET Counselling fees: 1) Registration fee varies by institute 2) Security deposit required 3) Counselling participation fee 4) Document verification charges 5) Seat acceptance fee 6) Check individual institute notifications for exact amounts.",
       category: "inicet",
     },
     {
       id: 49,
-      question: "How to handle NEET counselling stress?",
+      question: "How to handle NEET Counselling stress?",
       answer:
-        "Managing counselling stress: 1) Stay informed about process 2) Prepare documents in advance 3) Have backup options ready 4) Seek family and peer support 5) Practice relaxation techniques 6) Stay positive and focused 7) Consult counselors if needed.",
-      category: "counselling",
+        "Managing Counselling stress: 1) Stay informed about process 2) Prepare documents in advance 3) Have backup options ready 4) Seek family and peer support 5) Practice relaxation techniques 6) Stay positive and focused 7) Consult counselors if needed.",
+      category: "Counselling",
     },
     {
       id: 50,
@@ -396,7 +396,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
     { id: "neet-ug", label: "NEET UG", icon: BookOpen },
     { id: "neet-pg", label: "NEET PG", icon: Award },
     { id: "inicet", label: "INICET", icon: Users },
-    { id: "counselling", label: "counselling", icon: HelpCircle },
+    { id: "Counselling", label: "Counselling", icon: HelpCircle },
     { id: "tools", label: "Tools", icon: BookOpen },
     { id: "career", label: "Career", icon: Award },
   ];
@@ -452,7 +452,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
               Get All Your Questions Answered
             </h2>
             <p className="text-blue-100 text-lg">
-              Find answers to common questions about NEET, counselling, and
+              Find answers to common questions about NEET, Counselling, and
               medical admissions
             </p>
           </div>

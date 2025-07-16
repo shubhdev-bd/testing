@@ -138,7 +138,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
               <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-2">
                 <Stethoscope className="w-6 h-6 text-white" />
               </div>
-              <p className="text-xs text-slate-600">Medical counselling</p>
+              <p className="text-xs text-slate-600">Medical Counselling</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-2">

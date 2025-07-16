@@ -12,7 +12,7 @@ interface StateTabsProps {
 
 /**
  * StateTabs Component
- * Displays state-wise counselling tabs with navigation
+ * Displays state-wise Counselling tabs with navigation
  * Hidden by default as per requirements
  */
 const StateTabs: React.FC<StateTabsProps> = ({ activeTab, onTabChange }) => {

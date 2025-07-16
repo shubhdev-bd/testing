@@ -31,13 +31,13 @@ const INICETPage: React.FC = () => {
       },
     },
     {
-      title: "INICET counselling",
+      title: "INICET Counselling",
       subtitle: "AIIMS/JIPMER/PGIMER guidance",
       icon: Brain,
       bgGradient: "from-indigo-400 to-purple-600",
-      action: "Start counselling",
+      action: "Start Counselling",
       onClick: () => {
-        console.log("INICET counselling clicked");
+        console.log("INICET Counselling clicked");
       },
     },
     {
@@ -78,7 +78,7 @@ const INICETPage: React.FC = () => {
     },
     {
       date: "JUL 10 2025",
-      title: "counselling Registration",
+      title: "Counselling Registration",
       subtitle: "Start Date",
       status: "upcoming",
     },

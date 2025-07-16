@@ -17,7 +17,7 @@ const WhatsAppSupport: React.FC = () => {
   const handleWhatsAppClick = () => {
     const phoneNumber = "919876543210"; // Replace with actual WhatsApp number
     const message = encodeURIComponent(
-      "Hi! I need help with medical counselling guidance."
+      "Hi! I need help with medical Counselling guidance."
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank");
@@ -47,7 +47,7 @@ const WhatsAppSupport: React.FC = () => {
         </div>
 
         <p className="text-sm text-slate-700 mb-4">
-          Need instant help? Chat with our counselling experts on WhatsApp for
+          Need instant help? Chat with our Counselling experts on WhatsApp for
           immediate assistance.
         </p>
 
