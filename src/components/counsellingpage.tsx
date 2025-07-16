@@ -182,7 +182,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
       <div className="flex-1 bg-gradient-to-br from-rose-50 via-blue-50 to-indigo-50 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-slate-600">Loading Counseling Data...</p>
+          <p className="text-slate-600">Loading Counseling Data....</p>
         </div>
       </div>
     );
