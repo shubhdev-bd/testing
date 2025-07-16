@@ -17,7 +17,7 @@ import SupportPage from "./components/SupportPage";
 import FAQPage from "./components/FAQPage";
 import UniversitiesPage from "./components/UniversitiesPage";
 import ResultrankingPage from "./components/Resultrankingpage";
-import CounselingPage from "./components/counsellingpage";
+import counsellingPage from "./components/counsellingpage";
 import AIAssistant from "./components/AIAssistant";
 import WhatsAppSupport from "./components/WhatsAppSupport";
 
@@ -135,9 +135,9 @@ function App() {
       return <ResultrankingPage onBack={handleBackToDashboard} />;
     }
 
-    // Counseling page
-    if (activeSection === "counselling" || activeSection === "counseling") {
-      return <CounselingPage onBack={handleBackToDashboard} />;
+    // counselling page
+    if (activeSection === "counselling" || activeSection === "counselling") {
+      return <counsellingPage onBack={handleBackToDashboard} />;
     }
 
     // NEW COMMIT: Data pages

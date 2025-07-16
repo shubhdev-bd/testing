@@ -11,7 +11,7 @@
 
 //   const loadingTexts = [
 //     "Initializing BD-Consulting Platform...",
-//     "Loading Medical Counseling Data...",
+//     "Loading Medical counselling Data...",
 //     "Preparing Your Dashboard...",
 //     "Almost Ready!",
 //   ];

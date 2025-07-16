@@ -1,16 +1,16 @@
-import React from 'react';
-import { 
-  FileText, 
-  BarChart3, 
-  Users, 
-  Award, 
+import React from "react";
+import {
+  FileText,
+  BarChart3,
+  Users,
+  Award,
   Calendar,
   ExternalLink,
   Download,
   Target,
   GraduationCap,
-  Building2
-} from 'lucide-react';
+  Building2,
+} from "lucide-react";
 
 /**
  * NEET UG Main Content Page
@@ -26,17 +26,23 @@ const NeetUGPage: React.FC = () => {
       bgGradient: "from-blue-400 to-blue-600",
       action: "Get Result Now",
       onClick: () => {
-        window.open("https://examinationservices.nic.in/resultservices/Neet2025/Login", "_blank");
+        window.open(
+          "https://examinationservices.nic.in/resultservices/Neet2025/Login",
+          "_blank"
+        );
       },
     },
     {
-      title: "UG Counseling Process",
+      title: "UG counselling Process",
       subtitle: "Step by step guidance",
       icon: GraduationCap,
       bgGradient: "from-green-400 to-green-600",
-      action: "Start Counseling",
+      action: "Start counselling",
       onClick: () => {
-        window.open("https://docs.google.com/forms/d/e/1FAIpQLSdwL6ERosbYYVBw5dUxQoVupLnzSDEtW8qe0UE-3FsptSB8sw/viewform?usp=preview", "_blank");
+        window.open(
+          "https://docs.google.com/forms/d/e/1FAIpQLSdwL6ERosbYYVBw5dUxQoVupLnzSDEtW8qe0UE-3FsptSB8sw/viewform?usp=preview",
+          "_blank"
+        );
       },
     },
     {
@@ -77,7 +83,7 @@ const NeetUGPage: React.FC = () => {
     },
     {
       date: "JUL 1 2025",
-      title: "Counseling Registration",
+      title: "counselling Registration",
       subtitle: "Start Date",
       status: "upcoming",
     },
@@ -121,8 +127,12 @@ const NeetUGPage: React.FC = () => {
                 </div>
                 <ExternalLink className="w-5 h-5 opacity-70" />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold mb-2">{card.title}</h3>
-              <p className="text-white/80 mb-4 text-sm lg:text-base">{card.subtitle}</p>
+              <h3 className="text-lg lg:text-xl font-bold mb-2">
+                {card.title}
+              </h3>
+              <p className="text-white/80 mb-4 text-sm lg:text-base">
+                {card.subtitle}
+              </p>
               <button
                 className="bg-white/20 backdrop-blur-sm px-4 py-2 lg:px-6 lg:py-3 rounded-lg lg:rounded-xl hover:bg-white/30 transition-all duration-200 font-medium text-sm lg:text-base"
                 onClick={card.onClick}
@@ -230,10 +240,11 @@ const NeetUGPage: React.FC = () => {
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl lg:rounded-3xl p-6 lg:p-8 text-center text-white shadow-2xl">
           <h3 className="text-xl lg:text-3xl font-bold mb-3 lg:mb-4">
-            Ready to Start Your <span className="text-blue-300">Medical Journey?</span>
+            Ready to Start Your{" "}
+            <span className="text-blue-300">Medical Journey?</span>
           </h3>
           <p className="text-blue-100 mb-4 lg:mb-6 text-sm lg:text-lg">
-            Get expert guidance for NEET UG preparation and counseling
+            Get expert guidance for NEET UG preparation and counselling
           </p>
           <a
             href="https://forms.gle/HE2RyX5CLh7j9FzX9"

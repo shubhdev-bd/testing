@@ -59,19 +59,7 @@
 //           path="/institutes/government"
 //           element={<GovernmentInstitutes />}
 //         />
-//         <Route path="/resultranking" element={<ResultRankingPage />} />
-//         <Route path="/results" element={
-//           <PageLayout
-//             // user={user}
-//             // isMobileMenuOpen={isMobileMenuOpen}
-//             // isSidebarCollapsed={isSidebarCollapsed}
-//             // onSearchChange={handleSearchChange}
-//             // onMobileMenuToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-//             // onToggleSidebar={toggleSidebar}
-//           >
-//             <NIRFRankingsPage onBack={() => window.history.back()} />
-//           </PageLayout>
-//         } />
+//
 
 //         {/* Add a route for the FAQ page */}
 //         <Route path="/faq" element={<FAQPage />} />

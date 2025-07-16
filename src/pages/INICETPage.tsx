@@ -1,17 +1,17 @@
-import React from 'react';
-import { 
-  FileText, 
-  BarChart3, 
-  Users, 
-  Award, 
+import React from "react";
+import {
+  FileText,
+  BarChart3,
+  Users,
+  Award,
   Calendar,
   ExternalLink,
   Download,
   Target,
   GraduationCap,
   Building2,
-  Brain
-} from 'lucide-react';
+  Brain,
+} from "lucide-react";
 
 /**
  * INICET Main Content Page
@@ -31,13 +31,13 @@ const INICETPage: React.FC = () => {
       },
     },
     {
-      title: "INICET Counseling",
+      title: "INICET counselling",
       subtitle: "AIIMS/JIPMER/PGIMER guidance",
       icon: Brain,
       bgGradient: "from-indigo-400 to-purple-600",
-      action: "Start Counseling",
+      action: "Start counselling",
       onClick: () => {
-        console.log("INICET Counseling clicked");
+        console.log("INICET counselling clicked");
       },
     },
     {
@@ -78,7 +78,7 @@ const INICETPage: React.FC = () => {
     },
     {
       date: "JUL 10 2025",
-      title: "Counseling Registration",
+      title: "counselling Registration",
       subtitle: "Start Date",
       status: "upcoming",
     },
@@ -132,8 +132,12 @@ const INICETPage: React.FC = () => {
                 </div>
                 <ExternalLink className="w-5 h-5 opacity-70" />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold mb-2">{card.title}</h3>
-              <p className="text-white/80 mb-4 text-sm lg:text-base">{card.subtitle}</p>
+              <h3 className="text-lg lg:text-xl font-bold mb-2">
+                {card.title}
+              </h3>
+              <p className="text-white/80 mb-4 text-sm lg:text-base">
+                {card.subtitle}
+              </p>
               <button
                 className="bg-white/20 backdrop-blur-sm px-4 py-2 lg:px-6 lg:py-3 rounded-lg lg:rounded-xl hover:bg-white/30 transition-all duration-200 font-medium text-sm lg:text-base"
                 onClick={card.onClick}
@@ -185,11 +189,17 @@ const INICETPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {institutes.map((institute, index) => (
-              <div key={index} className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-4 border border-purple-200/50 hover:shadow-lg transition-all duration-300">
+              <div
+                key={index}
+                className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-4 border border-purple-200/50 hover:shadow-lg transition-all duration-300"
+              >
                 <div className="text-center">
-                  <h4 className="font-bold text-slate-800 mb-2">{institute.name}</h4>
+                  <h4 className="font-bold text-slate-800 mb-2">
+                    {institute.name}
+                  </h4>
                   <div className="text-sm text-slate-600 mb-1">
-                    <span className="font-medium">{institute.seats}</span> PG Seats
+                    <span className="font-medium">{institute.seats}</span> PG
+                    Seats
                   </div>
                   <div className="text-xs text-purple-600">
                     Est. {institute.established}
@@ -227,7 +237,8 @@ const INICETPage: React.FC = () => {
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl lg:rounded-3xl p-6 lg:p-8 text-center text-white shadow-2xl">
           <h3 className="text-xl lg:text-3xl font-bold mb-3 lg:mb-4">
-            Join India's <span className="text-purple-300">Premier Medical Institutes</span>
+            Join India's{" "}
+            <span className="text-purple-300">Premier Medical Institutes</span>
           </h3>
           <p className="text-purple-100 mb-4 lg:mb-6 text-sm lg:text-lg">
             Get expert guidance for INICET preparation and institute selection

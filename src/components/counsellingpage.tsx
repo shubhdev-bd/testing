@@ -8,11 +8,11 @@ import {
   Search,
 } from "lucide-react";
 
-interface CounselingPageProps {
+interface counsellingPageProps {
   onBack: () => void;
 }
 
-interface CounselingData {
+interface counsellingData {
   Round: number;
   AI_Rank: number;
   State: string;
@@ -23,13 +23,13 @@ interface CounselingData {
 }
 
 /**
- * Counseling Page Component
- * Displays INICET PG counseling data with filtering and search capabilities
+ * counselling Page Component
+ * Displays INICET PG counselling data with filtering and search capabilities
  * Shows round-wise seat allotment information in tabular format
  */
-const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
-  // State for counseling data
-  const [counselingData, setCounselingData] = useState<CounselingData[]>([]);
+const counsellingPage: React.FC<counsellingPageProps> = ({ onBack }) => {
+  // State for counselling data
+  const [counsellingData, setcounsellingData] = useState<counsellingData[]>([]);
   // State for loading status
   const [loading, setLoading] = useState(true);
   // State for search functionality
@@ -40,11 +40,11 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   /**
-   * Parse CSV data into counseling objects
+   * Parse CSV data into counselling objects
    * @param csvText - Raw CSV text data
-   * @returns Array of counseling data objects
+   * @returns Array of counselling data objects
    */
-  const parseCSV = (csvText: string): CounselingData[] => {
+  const parseCSV = (csvText: string): counsellingData[] => {
     const lines = csvText.trim().split("\n");
     // const headers = lines[0].split(",");
 
@@ -63,7 +63,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
   };
 
   /**
-   * Fetch counseling data from CSV file
+   * Fetch counselling data from CSV file
    * Loads data on component mount
    */
   useEffect(() => {
@@ -72,11 +72,11 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
         const response = await fetch("/data/INICET_PG.csv");
         const csvText = await response.text();
         const parsedData = parseCSV(csvText);
-        setCounselingData(parsedData);
+        setcounsellingData(parsedData);
       } catch (error) {
-        console.error("Error fetching counseling data:", error);
+        console.error("Error fetching counselling data:", error);
         // Fallback data for demonstration
-        setCounselingData([
+        setcounsellingData([
           {
             Round: 1,
             AI_Rank: 1,
@@ -114,10 +114,10 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
   }, []);
 
   /**
-   * Filter counseling data based on search term, round, and category
-   * @returns Filtered array of counseling data
+   * Filter counselling data based on search term, round, and category
+   * @returns Filtered array of counselling data
    */
-  const filteredData = counselingData.filter((item) => {
+  const filteredData = counsellingData.filter((item) => {
     const matchesSearch =
       item.Institute.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.Course.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -132,11 +132,13 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
   // Get unique values for filters
   const rounds = [
     "all",
-    ...Array.from(new Set(counselingData.map((item) => item.Round.toString()))),
+    ...Array.from(
+      new Set(counsellingData.map((item) => item.Round.toString()))
+    ),
   ];
   const categories = [
     "all",
-    ...Array.from(new Set(counselingData.map((item) => item.Category))),
+    ...Array.from(new Set(counsellingData.map((item) => item.Category))),
   ];
 
   /**
@@ -182,7 +184,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
       <div className="flex-1 bg-gradient-to-br from-rose-50 via-blue-50 to-indigo-50 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-slate-600">Loading Counseling Data...</p>
+          <p className="text-slate-600">Loading counselling Data...</p>
         </div>
       </div>
     );
@@ -200,7 +202,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
             <ArrowLeft className="w-5 h-5 text-slate-600" />
           </button>
           <h1 className="text-xl font-bold text-slate-800">
-            INICET PG Counseling Data
+            INICET PG counselling Data
           </h1>
         </div>
       </div>
@@ -272,7 +274,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
               <Users className="w-6 h-6 text-white" />
             </div>
             <div className="text-2xl font-bold text-slate-800 mb-2">
-              {counselingData.length}
+              {counsellingData.length}
             </div>
             <div className="text-slate-600 text-sm">Total Allotments</div>
           </div>
@@ -282,7 +284,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
               <Building2 className="w-6 h-6 text-white" />
             </div>
             <div className="text-2xl font-bold text-slate-800 mb-2">
-              {new Set(counselingData.map((item) => item.Institute)).size}
+              {new Set(counsellingData.map((item) => item.Institute)).size}
             </div>
             <div className="text-slate-600 text-sm">Institutes</div>
           </div>
@@ -292,7 +294,7 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
               <BookOpen className="w-6 h-6 text-white" />
             </div>
             <div className="text-2xl font-bold text-slate-800 mb-2">
-              {new Set(counselingData.map((item) => item.Course)).size}
+              {new Set(counsellingData.map((item) => item.Course)).size}
             </div>
             <div className="text-slate-600 text-sm">Courses</div>
           </div>
@@ -304,16 +306,16 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
             <div className="text-2xl font-bold text-slate-800 mb-2">
               {rounds.length - 1}
             </div>
-            <div className="text-slate-600 text-sm">Counseling Rounds</div>
+            <div className="text-slate-600 text-sm">counselling Rounds</div>
           </div>
         </div>
 
-        {/* Counseling Data Table */}
+        {/* counselling Data Table */}
         <div className="bg-white/80 backdrop-blur-xl rounded-2xl border border-white/20 shadow-lg overflow-hidden">
           <div className="p-6 border-b border-slate-200">
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-bold text-slate-800">
-                Counseling Allotment Data
+                counselling Allotment Data
               </h3>
             </div>
           </div>
@@ -410,4 +412,4 @@ const CounselingPage: React.FC<CounselingPageProps> = ({ onBack }) => {
   );
 };
 
-export default CounselingPage;
+export default counsellingPage;

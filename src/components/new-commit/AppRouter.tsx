@@ -15,7 +15,7 @@ import SeatMatrixPage from "../../pages/SeatMatrixPage";
 import FeeStipendBondPage from "../../pages/FeeStipendBondPage";
 import ResultrankingPage from "../Resultrankingpage"; // Adjust path if needed
 
-import CounselingPage from "../counsellingpage";
+import counsellingPage from "../counsellingpage";
 
 /**
  * NEW COMMIT: Enhanced Router Component with Additional Data Pages
@@ -61,14 +61,14 @@ const AppRouter: React.FC = () => {
           element={<ResultrankingPage onBack={() => window.history.back()} />}
         />
 
-        {/* Counseling Route */}
+        {/* counselling Route */}
         <Route
-          path="/counseling"
-          element={<CounselingPage onBack={() => window.history.back()} />}
+          path="/counselling"
+          element={<counsellingPage onBack={() => window.history.back()} />}
         />
         <Route
           path="/counselling"
-          element={<CounselingPage onBack={() => window.history.back()} />}
+          element={<counsellingPage onBack={() => window.history.back()} />}
         />
         {/* <Route path="/resultranking" element={<ResultrankingPage />} /> */}
 

@@ -75,9 +75,9 @@
 //       color: "text-cyan-600",
 //     },
 //     {
-//       id: "counseling", // NEW COMMIT: Fixed counseling navigation
+//       id: "counselling", // NEW COMMIT: Fixed counselling navigation
 //       icon: UserCheck,
-//       label: "Counseling",
+//       label: "counselling",
 //       hasSubmenu: false,
 //       color: "text-pink-600",
 //     },

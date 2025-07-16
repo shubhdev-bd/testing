@@ -1,17 +1,17 @@
-import React from 'react';
-import { 
-  FileText, 
-  BarChart3, 
-  Users, 
-  Award, 
+import React from "react";
+import {
+  FileText,
+  BarChart3,
+  Users,
+  Award,
   Calendar,
   ExternalLink,
   Download,
   Target,
   GraduationCap,
   Building2,
-  Stethoscope
-} from 'lucide-react';
+  Stethoscope,
+} from "lucide-react";
 
 /**
  * NEET PG Main Content Page
@@ -31,13 +31,13 @@ const NeetPGPage: React.FC = () => {
       },
     },
     {
-      title: "PG Counseling Process",
+      title: "PG counselling Process",
       subtitle: "MD/MS admission guidance",
       icon: Stethoscope,
       bgGradient: "from-purple-400 to-indigo-600",
-      action: "Start Counseling",
+      action: "Start counselling",
       onClick: () => {
-        console.log("PG Counseling clicked");
+        console.log("PG counselling clicked");
       },
     },
     {
@@ -78,7 +78,7 @@ const NeetPGPage: React.FC = () => {
     },
     {
       date: "AUG 5 2025",
-      title: "Counseling Registration",
+      title: "counselling Registration",
       subtitle: "Start Date",
       status: "upcoming",
     },
@@ -122,8 +122,12 @@ const NeetPGPage: React.FC = () => {
                 </div>
                 <ExternalLink className="w-5 h-5 opacity-70" />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold mb-2">{card.title}</h3>
-              <p className="text-white/80 mb-4 text-sm lg:text-base">{card.subtitle}</p>
+              <h3 className="text-lg lg:text-xl font-bold mb-2">
+                {card.title}
+              </h3>
+              <p className="text-white/80 mb-4 text-sm lg:text-base">
+                {card.subtitle}
+              </p>
               <button
                 className="bg-white/20 backdrop-blur-sm px-4 py-2 lg:px-6 lg:py-3 rounded-lg lg:rounded-xl hover:bg-white/30 transition-all duration-200 font-medium text-sm lg:text-base"
                 onClick={card.onClick}
@@ -220,7 +224,9 @@ const NeetPGPage: React.FC = () => {
                   ✓
                 </div>
                 <div>
-                  <p className="text-slate-700 text-sm lg:text-base">{criteria}</p>
+                  <p className="text-slate-700 text-sm lg:text-base">
+                    {criteria}
+                  </p>
                 </div>
               </div>
             ))}

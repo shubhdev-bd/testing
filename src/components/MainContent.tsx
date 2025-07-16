@@ -31,7 +31,7 @@ interface MainContentProps {
 
 /**
  * MainContent Component
- * Main dashboard content area displaying counseling information,
+ * Main dashboard content area displaying counselling information,
  * statistics, timelines, and action cards
  */
 const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
@@ -82,7 +82,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
       icon: GraduationCap,
       bgGradient: "from-green-400 to-green-600",
       textColor: "text-white",
-      action: "Free Counseling",
+      action: "Free counselling",
       onClick: () => {
         window.open(
           "https://docs.google.com/forms/d/e/1FAIpQLSdwL6ERosbYYVBw5dUxQoVupLnzSDEtW8qe0UE-3FsptSB8sw/viewform?usp=preview",
@@ -141,7 +141,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
     { label: "Qualified", value: "2,15,768", year: "2024" },
   ];
 
-  // Timeline steps for counseling process
+  // Timeline steps for counselling process
   const timelineSteps = [
     {
       date: "SEP 20 2024",
@@ -181,7 +181,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
               <span className="text-white text-2xl">⚡</span>
             </div>
             <h1 className="text-xl font-bold text-white mb-2">
-              All India Counseling - UG Medical
+              All India counselling - UG Medical
             </h1>
             <p className="text-orange-100 mb-6 text-sm">Central • All India</p>
 
@@ -211,7 +211,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
           <div className="hidden xl:block text-center">
             <div className="inline-flex items-center space-x-3 mb-6">
               <h1 className="text-3xl lg:text-4xl font-bold text-white">
-                NEET UG Medical Counseling 2025
+                NEET UG Medical counselling 2025
               </h1>
               <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
                 <span className="text-white text-lg">⚡</span>
@@ -373,10 +373,10 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
           </div>
         </div>
 
-        {/* Counseling Timeline - Mobile Optimized */}
+        {/* counselling Timeline - Mobile Optimized */}
         <div className="bg-white/80 backdrop-blur-xl rounded-2xl lg:rounded-3xl shadow-xl p-6 lg:p-8 border border-white/20 mb-8 lg:mb-12">
           <h3 className="text-xl lg:text-2xl font-bold text-slate-800 mb-6 lg:mb-8 text-center">
-            Counseling Timeline 2025
+            counselling Timeline 2025
           </h3>
 
           <div className="relative">

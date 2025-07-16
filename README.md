@@ -1,12 +1,12 @@
-# BD-Counseling
+# BD-counselling
 
 ## Medical Career Guidance Platform
 
-A comprehensive web application for NEET counseling, medical college admissions, and career guidance for medical aspirants.
+A comprehensive web application for NEET counselling, medical college admissions, and career guidance for medical aspirants.
 
 ### Features
 
-- **Dashboard**: Interactive dashboard with counseling information and statistics
+- **Dashboard**: Interactive dashboard with counselling information and statistics
 - **FAQ System**: Comprehensive FAQ with 20+ questions and categorized answers
 - **Universities**: Detailed college information with popup details
 - **AI Assistant**: "Ask Kodee" - AI chatbot for instant guidance
@@ -26,11 +26,13 @@ A comprehensive web application for NEET counseling, medical college admissions,
 ### Getting Started
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Start development server:
+
    ```bash
    npm run dev
    ```
@@ -61,24 +63,28 @@ src/
 ### Key Features Implementation
 
 #### FAQ System
+
 - 20 comprehensive questions with detailed answers
-- Category-based filtering (NEET UG, NEET PG, INICET, Counseling, etc.)
+- Category-based filtering (NEET UG, NEET PG, INICET, counselling, etc.)
 - Search functionality
 - Expandable/collapsible answers
 
 #### Universities Page
+
 - College listing with detailed information
 - Popup modal with comprehensive college details
 - Search and state-based filtering
 - Responsive grid layout
 
 #### AI Assistant (Ask Kodee)
+
 - Floating chat interface
 - Quick question templates
 - Contextual responses based on keywords
 - Minimizable chat window
 
 #### Responsive Design
+
 - Mobile-first approach
 - Fixed sidebar and choice lists on desktop
 - Collapsible sidebar with icon-only mode
@@ -87,6 +93,7 @@ src/
 ### Comments and Documentation
 
 All components include comprehensive JSDoc comments explaining:
+
 - Component purpose and functionality
 - Props interfaces with detailed descriptions
 - Function parameters and return values
@@ -98,7 +105,7 @@ All components include comprehensive JSDoc comments explaining:
 - **Explore**: Medical courses and college information
 - **Rank Predictor**: NEET rank prediction tools
 - **Universities**: Detailed college listings
-- **Counseling**: Counseling process information
+- **counselling**: counselling process information
 - **Results & Rankings**: NEET results and ranking data
 - **FAQ**: Frequently asked questions
 - **Profile**: User profile management
