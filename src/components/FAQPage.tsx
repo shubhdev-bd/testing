@@ -494,7 +494,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ onBack }) => {
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {filteredFAQs.map((faq) => (
             <div
               key={faq.id}
