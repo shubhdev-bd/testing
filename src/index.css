@@ -26,11 +26,11 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-  
+
   .animate-in {
     animation: animateIn 0.3s ease-out;
   }
-  
+
   .slide-in-from-top-2 {
     animation: slideInFromTop 0.3s ease-out;
   }
@@ -72,7 +72,10 @@
 }
 
 /* Smooth transitions for all interactive elements */
-button, a, input, select {
+button,
+a,
+input,
+select {
   transition: all 0.2s ease-in-out;
 }
 
@@ -86,7 +89,8 @@ select:focus-visible {
 
 /* Loading animation */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -100,7 +104,8 @@ select:focus-visible {
 
 /* Bounce animation */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-25%);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
@@ -129,9 +134,20 @@ select:focus-visible {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   .mobile-text-sm {
     font-size: 0.875rem;
+  }
+
+  /* Ensure no horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Mobile container max width */
+  .mobile-container {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 
@@ -140,13 +156,70 @@ select:focus-visible {
   .text-responsive {
     font-size: 0.875rem;
   }
-  
+
   .p-responsive {
     padding: 0.75rem;
   }
-  
+
   .space-responsive > * + * {
     margin-left: 0.5rem;
+  }
+
+  /* Prevent horizontal overflow */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Mobile FAQ improvements */
+  .faq-mobile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mobile main content improvements */
+  .mobile-main-content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Mobile-specific FAQ improvements */
+  .faq-mobile {
+    padding: 1rem;
+  }
+
+  .faq-mobile .faq-item {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Mobile navigation improvements */
+  .mobile-nav-item {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile hero section */
+  .mobile-hero {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.75rem;
+  }
+
+  /* Mobile card grid */
+  .mobile-card-grid {
+    gap: 0.5rem;
+  }
+
+  /* Mobile text sizing */
+  .mobile-text-xs {
+    font-size: 0.75rem;
+  }
+
+  .mobile-text-sm {
+    font-size: 0.875rem;
   }
 }
 
@@ -168,9 +241,11 @@ select:focus-visible {
 
 /* Soft shadows */
 .shadow-soft {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 .shadow-soft-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    0 4px 6px -2px rgba(0, 0, 0, 0.03);
 }

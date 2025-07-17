@@ -258,7 +258,7 @@ const Header: React.FC<HeaderProps> = ({
             placeholder="Search courses, colleges..."
             value={searchValue}
             onChange={handleSearch}
-            className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-slate-50/50 transition-all duration-200"
+            className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-slate-50/50 transition-all duration-200 text-sm"
           />
         </div>
       </div>
