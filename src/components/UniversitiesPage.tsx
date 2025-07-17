@@ -63,7 +63,7 @@ const UniversitiesPage: React.FC<UniversitiesPageProps> = ({ onBack }) => {
       management: "Government of NCT of Delhi",
       programs: ["MD", "MS", "Diploma", "MCh"],
       established: 1958,
-      website: "https://mamc.ac.in",
+      website: "https://mamc.delhi.gov.in",
     },
     {
       id: 3,
