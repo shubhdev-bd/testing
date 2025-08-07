@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from "react";
 import {
   Globe,
   FileText,
@@ -20,8 +20,6 @@ import {
 } from "lucide-react";
 import FAQ from "./FAQPage";
 import NeetComparison from "./NeetComparison";
-import QuotaModal from "./QuotaModal";
-
 
 /**
  * MainContent Component Props Interface
@@ -29,23 +27,16 @@ import QuotaModal from "./QuotaModal";
  */
 interface MainContentProps {
   activeTab: string;
-  dashboardData?: {
-    neetStats: any[];
-    timeline: any[];
-    choiceLists: any[];
-  };
 }
 
 /**
  * MainContent Component
  * Main dashboard content area displaying Counselling information,
  * statistics, timelines, and action cards
- * API Integration: Uses dashboard data from props
  */
-const MainContent: React.FC<MainContentProps> = ({ activeTab, dashboardData }) => {
-const [showQuotaModal, setShowQuotaModal] = useState(false);
+const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
   // Action buttons configuration for the hero section
-  const actionButtons = [
+    const actionButtons = [
     {
       id: "website",
       label: "Website",
@@ -168,10 +159,8 @@ const [showQuotaModal, setShowQuotaModal] = useState(false);
     },
   ];
 
-  // Data cards for displaying various information sections
-  
   // NEET statistics data for comparison display
-  const neetStats = dashboardData?.neetStats || [
+  const neetStats = [
     { label: "Registered", value: "6,819", year: "2025" },
     { label: "Appeared", value: "6,612", year: "2025" },
     { label: "Qualified", value: "4,681", year: "2025" },
@@ -181,7 +170,7 @@ const [showQuotaModal, setShowQuotaModal] = useState(false);
   ];
 
   // Timeline steps for Counselling process
-  const timelineSteps = dashboardData?.timeline || [
+  const timelineSteps = [
     {
       date: "SEP 20 2024",
       title: "Round 2 Joining",
@@ -356,8 +345,6 @@ const [showQuotaModal, setShowQuotaModal] = useState(false);
           ))}
         </div>
 
-        
-
         {/* NEET UG 2024 vs 2025 Statistics - Mobile Optimized */}
         <div className="bg-white/80 backdrop-blur-xl rounded-2xl lg:rounded-3xl shadow-xl p-6 lg:p-8 mb-8 lg:mb-12 border border-white/20">
           <div className="text-center mb-6 lg:mb-8">
@@ -521,7 +508,19 @@ const [showQuotaModal, setShowQuotaModal] = useState(false);
             href="https://forms.gle/HE2RyX5CLh7j9FzX9"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-pink-400 to-red-400 px-6 py-3 lg:px-8 lg:py-4 rounded-xl text-white font-bold text-base lg:text-lg hover:from-pink-500 hover:to-red-500 transition-all duration-300 transform hover:scale-105 shadow-xl inline-block"
+            className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 lg:p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            onClick={() => {
+              // NEW COMMIT: Add navigation to data pages
+              if (card.title === "Allotments") {
+                window.location.href = "/allotments";
+              } else if (card.title === "Closing Ranks") {
+                window.location.href = "/closing-ranks";
+              } else if (card.title === "Seat Matrix") {
+                window.location.href = "/seat-matrix";
+              } else if (card.title === "Fee, Stipend & Bond") {
+                window.location.href = "/fee-stipend-bond";
+              }
+            }}
           >
             Click Here for Free Consultation
           </a>
