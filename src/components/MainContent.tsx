@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Globe,
   FileText,
@@ -20,6 +21,7 @@ import {
 } from "lucide-react";
 import FAQ from "./FAQPage";
 import NeetComparison from "./NeetComparison";
+import QuotaModal from "./QuotaModal";
 
 /**
  * MainContent Component Props Interface
@@ -35,6 +37,8 @@ interface MainContentProps {
  * statistics, timelines, and action cards
  */
 const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
+  const [showQuotaModal, setShowQuotaModal] = useState(false);
+
   // Action buttons configuration for the hero section
     const actionButtons = [
     {
