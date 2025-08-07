@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import {
   Globe,
   FileText,
@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import FAQ from "./FAQPage";
 import NeetComparison from "./NeetComparison";
+import QuotaModal from "./QuotaModal";
+
 
 /**
  * MainContent Component Props Interface
@@ -27,29 +29,59 @@ import NeetComparison from "./NeetComparison";
  */
 interface MainContentProps {
   activeTab: string;
+  dashboardData?: {
+    neetStats: any[];
+    timeline: any[];
+    choiceLists: any[];
+  };
 }
 
 /**
  * MainContent Component
  * Main dashboard content area displaying Counselling information,
  * statistics, timelines, and action cards
+ * API Integration: Uses dashboard data from props
  */
-const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
+const MainContent: React.FC<MainContentProps> = ({ activeTab, dashboardData }) => {
+const [showQuotaModal, setShowQuotaModal] = useState(false);
   // Action buttons configuration for the hero section
   const actionButtons = [
+    {
+      id: "website",
+      label: "Website",
+      icon: FileText,
+      bgColor: "bg-orange-100",
+      textColor: "text-orange-600",
+      onClick: () => {
+        window.open(
+          "https://mcc.nic.in/ug-medical-counselling/",
+          "_blank"
+        );
+      },
+    },
     {
       id: "quotas",
       label: "Quotas",
       icon: FileText,
       bgColor: "bg-orange-100",
       textColor: "text-orange-600",
-    },
+      onClick: () => {
+        setShowQuotaModal(true); // Show the popup modal
+      },
+      },
+  
     {
       id: "registration",
       label: "Registration",
       icon: BarChart3,
       bgColor: "bg-orange-100",
       textColor: "text-orange-600",
+      onClick: () => {
+        window.open(
+          "https://mcc.admissions.nic.in/Counseling/Root/Home.aspx?enc=89xw0ctRCXfaXHy3CACizMGeESUPc92SoSpzB/gzd/wSY6DDua8cQKQ+HT29rjmuRXQG2NoF+WHOj6h2WBR++A==",
+          "_blank"
+        );
+      },
     },
     {
       id: "prospectus",
@@ -57,6 +89,39 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
       icon: FileText,
       bgColor: "bg-orange-100",
       textColor: "text-orange-600",
+      onClick: () => {
+        window.open(
+          "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2025/07/2025072143.pdf",
+          "_blank"
+        );
+      },
+    },
+  ];
+
+  const dataCards = [
+    {
+      title: "Allotments",
+      subtitle: "2022, 2023, 2024",
+      icon: Users,
+      color: "bg-purple-500",
+    },
+    {
+      title: "Closing Ranks",
+      subtitle: "2022, 2023, 2024",
+      icon: TrendingUp,
+      color: "bg-blue-500",
+    },
+    {
+      title: "Seat Matrix",
+      subtitle: "2022, 2023, 2024",
+      icon: BarChart3,
+      color: "bg-indigo-500",
+    },
+    {
+      title: "Fee, Stipend & Bond",
+      subtitle: "2022, 2023, 2024",
+      icon: Award,
+      color: "bg-purple-600",
     },
   ];
 
@@ -104,35 +169,9 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
   ];
 
   // Data cards for displaying various information sections
-  const dataCards = [
-    {
-      title: "Allotments",
-      subtitle: "2022, 2023, 2024",
-      icon: Users,
-      color: "bg-purple-500",
-    },
-    {
-      title: "Closing Ranks",
-      subtitle: "2022, 2023, 2024",
-      icon: TrendingUp,
-      color: "bg-blue-500",
-    },
-    {
-      title: "Seat Matrix",
-      subtitle: "2022, 2023, 2024",
-      icon: BarChart3,
-      color: "bg-indigo-500",
-    },
-    {
-      title: "Fee, Stipend & Bond",
-      subtitle: "2022, 2023, 2024",
-      icon: Award,
-      color: "bg-purple-600",
-    },
-  ];
-
+  
   // NEET statistics data for comparison display
-  const neetStats = [
+  const neetStats = dashboardData?.neetStats || [
     { label: "Registered", value: "6,819", year: "2025" },
     { label: "Appeared", value: "6,612", year: "2025" },
     { label: "Qualified", value: "4,681", year: "2025" },
@@ -142,7 +181,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
   ];
 
   // Timeline steps for Counselling process
-  const timelineSteps = [
+  const timelineSteps = dashboardData?.timeline || [
     {
       date: "SEP 20 2024",
       title: "Round 2 Joining",
@@ -189,6 +228,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
               {actionButtons.map((button) => (
                 <button
                   key={button.id}
+                  onClick={button.onClick} 
                   className={`flex flex-col items-center space-y-2 p-4 rounded-2xl transition-all duration-300 hover:shadow-xl transform hover:scale-105 ${button.bgColor} ${button.textColor}`}
                 >
                   <button.icon className="w-6 h-6" />
@@ -196,6 +236,8 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
                 </button>
               ))}
             </div>
+
+            <QuotaModal isOpen={showQuotaModal} onClose={() => setShowQuotaModal(false)} />  
 
             <div className="flex justify-center space-x-3">
               <button className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:bg-green-600 transition-all duration-300 transform hover:scale-110 shadow-lg">
@@ -226,12 +268,29 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
               {actionButtons.map((button) => (
                 <button
                   key={button.id}
+                  onClick={button.onClick}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-xl transform hover:scale-105 ${button.bgColor} ${button.textColor} font-medium`}
                 >
                   <button.icon className="w-5 h-5" />
                   <span>{button.label}</span>
                 </button>
               ))}
+            {showQuotaModal && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 relative">
+               <button
+                 className="absolute top-2 right-3 text-gray-500 hover:text-red-600"
+                 onClick={() => setShowQuotaModal(false)}
+                  >
+                ✕
+               </button>
+              <QuotaModal 
+              isOpen={showQuotaModal}
+              onClose={() => setShowQuotaModal(false)}
+              />
+            </div>
+          </div>
+          )}
               {/* <button className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white hover:bg-green-500 transition-all duration-300 transform hover:scale-110 shadow-lg">
                 <span className="text-lg font-bold">W</span>
               </button>
@@ -242,8 +301,32 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
           </div>
         </div>
       </div>
+      
 
       <div className="px-4 lg:px-6 py-6 lg:py-8 max-w-7xl mx-auto">
+        {/* Mobile-First Data Cards */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-8 lg:mb-12 -mt-50px">
+          {dataCards.map((card, index) => (
+            <div
+              key={index}
+              className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 lg:p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              <div
+                className={`w-10 h-10 lg:w-12 lg:h-12 ${card.color} rounded-xl flex items-center justify-center mb-3 lg:mb-4`}
+              >
+                <card.icon className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-slate-800 mb-1 text-sm lg:text-base">
+                {card.title}
+              </h3>
+              <p className="text-xs lg:text-sm text-slate-600">
+                {card.subtitle}
+              </p>
+              <ChevronRight className="w-4 h-4 text-slate-400 mt-2" />
+            </div>
+          ))}
+        </div>
+        
         {/* Mobile-First Quick Action Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 mb-8 lg:mb-12">
           {quickActionCards.map((card, index) => (
@@ -273,28 +356,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
           ))}
         </div>
 
-        {/* Mobile-First Data Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-8 lg:mb-12">
-          {dataCards.map((card, index) => (
-            <div
-              key={index}
-              className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 lg:p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <div
-                className={`w-10 h-10 lg:w-12 lg:h-12 ${card.color} rounded-xl flex items-center justify-center mb-3 lg:mb-4`}
-              >
-                <card.icon className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
-              </div>
-              <h3 className="font-bold text-slate-800 mb-1 text-sm lg:text-base">
-                {card.title}
-              </h3>
-              <p className="text-xs lg:text-sm text-slate-600">
-                {card.subtitle}
-              </p>
-              <ChevronRight className="w-4 h-4 text-slate-400 mt-2" />
-            </div>
-          ))}
-        </div>
+        
 
         {/* NEET UG 2024 vs 2025 Statistics - Mobile Optimized */}
         <div className="bg-white/80 backdrop-blur-xl rounded-2xl lg:rounded-3xl shadow-xl p-6 lg:p-8 mb-8 lg:mb-12 border border-white/20">
@@ -459,19 +521,7 @@ const MainContent: React.FC<MainContentProps> = ({ activeTab }) => {
             href="https://forms.gle/HE2RyX5CLh7j9FzX9"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 lg:p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
-            onClick={() => {
-              // NEW COMMIT: Add navigation to data pages
-              if (card.title === "Allotments") {
-                window.location.href = "/allotments";
-              } else if (card.title === "Closing Ranks") {
-                window.location.href = "/closing-ranks";
-              } else if (card.title === "Seat Matrix") {
-                window.location.href = "/seat-matrix";
-              } else if (card.title === "Fee, Stipend & Bond") {
-                window.location.href = "/fee-stipend-bond";
-              }
-            }}
+            className="bg-gradient-to-r from-pink-400 to-red-400 px-6 py-3 lg:px-8 lg:py-4 rounded-xl text-white font-bold text-base lg:text-lg hover:from-pink-500 hover:to-red-500 transition-all duration-300 transform hover:scale-105 shadow-xl inline-block"
           >
             Click Here for Free Consultation
           </a>
