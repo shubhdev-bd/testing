@@ -1,0 +1,341 @@
+import React, { useState } from "react";
+import {
+  Heart,
+  Plus,
+  ChevronRight,
+  Trash2,
+  Edit3,
+  Star,
+  TrendingUp,
+  Eye,
+  X,
+  Calendar,
+  Award,
+  Building2,
+} from "lucide-react";
+
+/**
+ * Enhanced Choice Lists Component
+ * Updated design with better announcements and latest updates
+ * Removed generic updates and added medical counselling specific content
+ */
+const EnhancedChoiceLists: React.FC = () => {
+  const [lists, setLists] = useState([
+    {
+      id: "1",
+      name: "AIQ R1 Priority List",
+      count: 28,
+      color: "bg-red-50 border-red-200",
+      priority: "high",
+    },
+    {
+      id: "2", 
+      name: "Maharashtra Govt List",
+      count: 14,
+      color: "bg-blue-50 border-blue-200",
+      priority: "medium",
+    },
+    {
+      id: "3",
+      name: "General Medicine DNB List", 
+      count: 22,
+      color: "bg-green-50 border-green-200",
+      priority: "high",
+    },
+    {
+      id: "4",
+      name: "Private Medical Colleges",
+      count: 18,
+      color: "bg-purple-50 border-purple-200", 
+      priority: "low",
+    },
+  ]);
+
+  const [showCreateForm, setShowCreateForm] = useState(false);
+  const [newListName, setNewListName] = useState("");
+
+  // Enhanced medical counselling specific updates
+  const latestUpdates = [
+    {
+      id: 1,
+      title: "NEET PG 2025 Counselling Schedule",
+      description: "Registration opens from April 17, 3:00 PM to May 7, 2025 11:55 PM",
+      time: "2 hours ago",
+      type: "schedule",
+      color: "from-blue-50 to-cyan-50",
+      borderColor: "border-blue-200/50",
+      icon: Calendar,
+      iconColor: "text-blue-600"
+    },
+    {
+      id: 2,
+      title: "INICET 2025 Results Declared",
+      description: "Check your scorecard and rank on the official website",
+      time: "5 hours ago", 
+      type: "result",
+      color: "from-green-50 to-emerald-50",
+      borderColor: "border-green-200/50",
+      icon: Award,
+      iconColor: "text-green-600"
+    },
+    {
+      id: 3,
+      title: "New Medical Colleges Added",
+      description: "15 new government medical colleges added to the database",
+      time: "1 day ago",
+      type: "update",
+      color: "from-purple-50 to-pink-50", 
+      borderColor: "border-purple-200/50",
+      icon: Building2,
+      iconColor: "text-purple-600"
+    },
+    {
+      id: 4,
+      title: "Seat Matrix 2025 Updated",
+      description: "Latest seat matrix with state-wise allocation now available",
+      time: "2 days ago",
+      type: "data",
+      color: "from-orange-50 to-amber-50",
+      borderColor: "border-orange-200/50", 
+      icon: TrendingUp,
+      iconColor: "text-orange-600"
+    }
+  ];
+
+  const createNewList = () => {
+    if (newListName.trim()) {
+      const newList = {
+        id: Date.now().toString(),
+        name: newListName.trim(),
+        count: 0,
+        color: "bg-indigo-50 border-indigo-200",
+        priority: "medium" as const,
+      };
+      setLists([...lists, newList]);
+      setNewListName("");
+      setShowCreateForm(false);
+    }
+  };
+
+  const deleteList = (id: string) => {
+    setLists(lists.filter((list) => list.id !== id));
+  };
+
+  const getPriorityIcon = (priority: string) => {
+    switch (priority) {
+      case "high":
+        return <Star className="w-4 h-4 text-yellow-500" />;
+      case "medium":
+        return <TrendingUp className="w-4 h-4 text-blue-500" />;
+      default:
+        return <div className="w-4 h-4 rounded-full bg-gray-300"></div>;
+    }
+  };
+
+  return (
+    <>
+      {/* Mobile Choice Lists */}
+      <div className="xl:hidden px-4 py-6 pt-20 bg-gradient-to-br from-rose-50 via-blue-50 to-indigo-50">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-pink-400 to-red-400 rounded-xl flex items-center justify-center">
+              <Heart className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h2 className="text-lg font-bold text-slate-800">My Choice lists</h2>
+              <p className="text-sm text-slate-500">{lists.length} choice lists</p>
+            </div>
+          </div>
+          <button className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 text-sm font-medium flex items-center space-x-1">
+            <Eye className="w-4 h-4" />
+            <span>View all</span>
+          </button>
+        </div>
+
+        <div className="space-y-3">
+          {lists.slice(0, 3).map((list) => (
+            <div
+              key={list.id}
+              className={`p-4 rounded-xl border-2 ${list.color} hover:shadow-lg transition-all duration-300 group`}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  {getPriorityIcon(list.priority)}
+                  <div>
+                    <h3 className="font-semibold text-slate-800 text-sm">{list.name}</h3>
+                    <p className="text-xs text-slate-600">{list.count} choices</p>
+                  </div>
+                </div>
+                <ChevronRight className="w-4 h-4 text-slate-400" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => setShowCreateForm(true)}
+          className="w-full mt-4 flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-slate-300 rounded-xl text-slate-600 hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
+        >
+          <Plus className="w-5 h-5" />
+          <span className="font-medium">Create new</span>
+        </button>
+      </div>
+
+      {/* Desktop Choice Lists */}
+      <div className="hidden xl:block w-80 bg-white/90 backdrop-blur-xl border-l border-slate-200/50 h-screen overflow-y-auto flex-shrink-0 fixed right-0 top-0 z-20 pt-16">
+        <div className="p-6">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-gradient-to-r from-pink-400 to-red-400 rounded-xl flex items-center justify-center">
+              <Heart className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-slate-800">Choice Lists</h2>
+              <p className="text-sm text-slate-500">Manage your preferences</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 mb-6 border border-blue-200/50">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-700">
+                {lists.reduce((sum, list) => sum + list.count, 0)}
+              </div>
+              <div className="text-sm text-blue-600">Total Choices</div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            {lists.map((list) => (
+              <div
+                key={list.id}
+                className={`p-4 rounded-xl border-2 ${list.color} hover:shadow-lg transition-all duration-300 group transform hover:scale-105`}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    {getPriorityIcon(list.priority)}
+                    <div>
+                      <h3 className="font-semibold text-slate-800">{list.name}</h3>
+                      <p className="text-sm text-slate-600">{list.count} choices</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-all duration-200">
+                    <button className="p-2 hover:bg-white/50 rounded-lg transition-colors">
+                      <Edit3 className="w-4 h-4 text-slate-600" />
+                    </button>
+                    <button
+                      onClick={() => deleteList(list.id)}
+                      className="p-2 hover:bg-red-100 rounded-lg transition-colors"
+                    >
+                      <Trash2 className="w-4 h-4 text-red-600" />
+                    </button>
+                    <ChevronRight className="w-4 h-4 text-slate-400" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {showCreateForm ? (
+            <div className="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <input
+                type="text"
+                placeholder="Enter list name..."
+                value={newListName}
+                onChange={(e) => setNewListName(e.target.value)}
+                className="w-full p-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                onKeyPress={(e) => e.key === "Enter" && createNewList()}
+              />
+              <div className="flex space-x-2 mt-4">
+                <button
+                  onClick={createNewList}
+                  className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 font-medium"
+                >
+                  Create
+                </button>
+                <button
+                  onClick={() => {
+                    setShowCreateForm(false);
+                    setNewListName("");
+                  }}
+                  className="flex-1 px-4 py-2 bg-slate-300 text-slate-700 rounded-xl hover:bg-slate-400 transition-colors font-medium"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button
+              onClick={() => setShowCreateForm(true)}
+              className="w-full mt-6 flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-slate-300 rounded-xl text-slate-600 hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
+            >
+              <Plus className="w-5 h-5" />
+              <span className="font-medium">Create New List</span>
+            </button>
+          )}
+        </div>
+
+        {/* Enhanced Medical Updates Section */}
+        <div className="p-6 border-t border-slate-200">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-bold text-slate-800">Medical Updates</h3>
+            <button className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 text-sm font-medium">
+              View All
+            </button>
+          </div>
+
+          <div className="space-y-4">
+            {latestUpdates.map((update) => (
+              <div
+                key={update.id}
+                className={`p-4 bg-gradient-to-r ${update.color} rounded-xl border ${update.borderColor} hover:shadow-lg transition-all duration-300 cursor-pointer`}
+              >
+                <div className="flex items-start space-x-3">
+                  <div className={`w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0`}>
+                    <update.icon className={`w-5 h-5 ${update.iconColor}`} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-slate-900 mb-1 text-sm">
+                      {update.title}
+                    </h4>
+                    <p className="text-sm text-slate-700 mb-2 leading-relaxed">
+                      {update.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="text-xs text-slate-600">{update.time}</div>
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        update.type === "schedule" ? "bg-blue-100 text-blue-700" :
+                        update.type === "result" ? "bg-green-100 text-green-700" :
+                        update.type === "update" ? "bg-purple-100 text-purple-700" :
+                        "bg-orange-100 text-orange-700"
+                      }`}>
+                        {update.type.charAt(0).toUpperCase() + update.type.slice(1)}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Actions */}
+          <div className="mt-6 space-y-3">
+            <button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <div className="flex items-center justify-center space-x-2">
+                <Calendar className="w-5 h-5" />
+                <span className="font-medium">Check Counselling Schedule</span>
+              </div>
+            </button>
+            
+            <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-xl hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <div className="flex items-center justify-center space-x-2">
+                <Award className="w-5 h-5" />
+                <span className="font-medium">View NEET Results</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default EnhancedChoiceLists;
