@@ -14,6 +14,8 @@ import ClosingRanksPage from "../../pages/ClosingRanksPage";
 import SeatMatrixPage from "../../pages/SeatMatrixPage";
 import FeeStipendBondPage from "../../pages/FeeStipendBondPage";
 import ResultrankingPage from "../Resultrankingpage"; // Adjust path if needed
+import ChoiceListsPage from "../../deployment-ready/pages/ChoiceListsPage";
+import AllCollegesPage from "../../deployment-ready/pages/AllCollegesPage";
 
 import CounsellingPage from "../Counsellingpage";
 
@@ -70,9 +72,17 @@ const AppRouter: React.FC = () => {
           path="/Counselling"
           element={<CounsellingPage onBack={() => window.history.back()} />}
         />
-        {/* <Route path="/resultranking" element={<ResultrankingPage />} /> */}
 
-        {/* <Route path="/faq" element={<FAQPage />} /> */}
+
+        {/* Choice Lists and All Colleges Routes */}
+        <Route
+          path="/choice-lists"
+          element={<ChoiceListsPage onBack={() => window.history.back()} />}
+        />
+        <Route
+          path="/all-colleges"
+          element={<AllCollegesPage onBack={() => window.history.back()} />}
+        />
 
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />

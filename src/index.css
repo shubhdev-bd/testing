@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('./deployment-ready/styles/mobile.css');
 
 @layer base {
   :root {

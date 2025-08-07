@@ -8,6 +8,9 @@ import {
   Star,
   TrendingUp,
   Eye,
+  Calendar,
+  Award,
+  Building2,
 } from "lucide-react";
 
 /**
@@ -264,42 +267,95 @@ const ChoiceLists: React.FC = () => {
         {/* Announcements Section */}
         <div className="p-6 border-t border-slate-200">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold text-slate-800">Latest Updates</h3>
+            <h3 className="text-lg font-bold text-slate-800">Medical Updates</h3>
             <button className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 text-sm font-medium">
               View All
             </button>
           </div>
 
           <div className="space-y-4">
-            <div className="p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200/50">
-              <h4 className="font-semibold text-blue-900 mb-2">
-                NEET 2025 Results
-              </h4>
-              <p className="text-sm text-blue-700 mb-2">
-                Results declared! Check your scorecard now
-              </p>
-              <div className="text-xs text-blue-600">2 hours ago</div>
+            <div className="p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200/50 hover:shadow-lg transition-all duration-300 cursor-pointer">
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-5 h-5 text-blue-600" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-slate-900 mb-1 text-sm">
+                    NEET PG 2025 Counselling Schedule
+                  </h4>
+                  <p className="text-sm text-slate-700 mb-2 leading-relaxed">
+                    Registration opens from April 17, 3:00 PM to May 7, 2025 11:55 PM
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-slate-600">2 hours ago</div>
+                    <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700">
+                      Schedule
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200/50">
-              <h4 className="font-semibold text-green-900 mb-2">
-                Round 3 Registration
-              </h4>
-              <p className="text-sm text-green-700 mb-2">
-                Registration opens from Oct 8, 2024
-              </p>
-              <div className="text-xs text-green-600">5 hours ago</div>
+            <div className="p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200/50 hover:shadow-lg transition-all duration-300 cursor-pointer">
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Award className="w-5 h-5 text-green-600" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-slate-900 mb-1 text-sm">
+                    INICET 2025 Results Declared
+                  </h4>
+                  <p className="text-sm text-slate-700 mb-2 leading-relaxed">
+                    Check your scorecard and rank on the official website
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-slate-600">5 hours ago</div>
+                    <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">
+                      Result
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-200/50">
-              <h4 className="font-semibold text-purple-900 mb-2">
-                Seat Matrix 2025
-              </h4>
-              <p className="text-sm text-purple-700 mb-2">
-                Updated seat matrix available for download
-              </p>
-              <div className="text-xs text-purple-600">1 day ago</div>
+            <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-200/50 hover:shadow-lg transition-all duration-300 cursor-pointer">
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-5 h-5 text-purple-600" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-slate-900 mb-1 text-sm">
+                    New Medical Colleges Added
+                  </h4>
+                  <p className="text-sm text-slate-700 mb-2 leading-relaxed">
+                    15 new government medical colleges added to the database
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-slate-600">1 day ago</div>
+                    <span className="px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-700">
+                      Update
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          {/* Quick Actions */}
+          <div className="mt-6 space-y-3">
+            <button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <div className="flex items-center justify-center space-x-2">
+                <Calendar className="w-5 h-5" />
+                <span className="font-medium">Check Counselling Schedule</span>
+              </div>
+            </button>
+            
+            <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-xl hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <div className="flex items-center justify-center space-x-2">
+                <Award className="w-5 h-5" />
+                <span className="font-medium">View NEET Results</span>
+              </div>
+            </button>
           </div>
         </div>
       </div>

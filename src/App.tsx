@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/new-commit/Header";
+import StateTabs from "./deployment-ready/components/StateTabs";
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
 import NeetUGPage from "./pages/NeetUGPage";
@@ -208,6 +209,13 @@ function App() {
           onNeetNavigation={handleNeetNavigation}
         />
 
+        {/* State Tabs - Now Visible */}
+        <StateTabs 
+          activeTab={activeTab} 
+          onTabChange={(tab) => console.log("Tab changed:", tab)}
+          isVisible={true}
+        />
+
         {/* Main layout with sidebar and content */}
         <div className="flex relative">
           {/* Mobile Sidebar Overlay */}
@@ -295,6 +303,13 @@ function App() {
           user={user}
           onSectionChange={handleSectionChange}
           onNeetNavigation={handleNeetNavigation}
+        />
+
+        {/* State Tabs - Now Visible */}
+        <StateTabs 
+          activeTab={activeTab} 
+          onTabChange={(tab) => console.log("Tab changed:", tab)}
+          isVisible={true}
         />
 
         {/* Main layout with sidebar and content */}
